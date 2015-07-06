@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FCCC89C4-A278-4CF2-AD1D-2F5DAB7A2859</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>59B001750F41A6AFF9AF7CFCB7E0DC8E6E812CD4</key>
+		<string>https://github.com/ambrishverma/iOS.git</string>
+		<key>DD52E70E73D6D6762B8D4FF36B77D4EEF9D7C038</key>
+		<string>https://github.com/ambrishverma/3Sum-v1.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>3Sum-v2/3Sum-v2.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>59B001750F41A6AFF9AF7CFCB7E0DC8E6E812CD4</key>
+		<string>../../../..</string>
+		<key>DD52E70E73D6D6762B8D4FF36B77D4EEF9D7C038</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ambrishverma/3Sum-v1.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DD52E70E73D6D6762B8D4FF36B77D4EEF9D7C038</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>59B001750F41A6AFF9AF7CFCB7E0DC8E6E812CD4</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DD52E70E73D6D6762B8D4FF36B77D4EEF9D7C038</string>
+			<key>IDESourceControlWCCName</key>
+			<string>3Sum-v1</string>
+		</dict>
+	</array>
+</dict>
+</plist>

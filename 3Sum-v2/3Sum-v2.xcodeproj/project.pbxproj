@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6862D94A1B4A09F500745516 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6862D9491B4A09F500745516 /* AppDelegate.swift */; };
+		6862D94C1B4A09F500745516 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6862D94B1B4A09F500745516 /* ViewController.swift */; };
+		6862D94F1B4A09F500745516 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6862D94D1B4A09F500745516 /* Main.storyboard */; };
+		6862D9511B4A09F500745516 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6862D9501B4A09F500745516 /* Images.xcassets */; };
+		6862D9541B4A09F500745516 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6862D9521B4A09F500745516 /* LaunchScreen.xib */; };
+		6862D9601B4A09F500745516 /* _Sum_v2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6862D95F1B4A09F500745516 /* _Sum_v2Tests.swift */; };
+		6862D96C1B4A0A2E00745516 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6862D9691B4A0A2E00745516 /* Bolts.framework */; };
+		6862D96D1B4A0A2E00745516 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6862D96A1B4A0A2E00745516 /* Parse.framework */; };
+		6862D96E1B4A0A2E00745516 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6862D96B1B4A0A2E00745516 /* ParseUI.framework */; };
+		6862D9701B4A0A3C00745516 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6862D96F1B4A0A3C00745516 /* AudioToolbox.framework */; };
+		6862D9721B4A0A4500745516 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6862D9711B4A0A4500745516 /* CoreLocation.framework */; };
+		6862D9741B4A0A5000745516 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6862D9731B4A0A5000745516 /* StoreKit.framework */; };
+		6862D9761B4A0A6D00745516 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6862D9751B4A0A6D00745516 /* CFNetwork.framework */; };
+		6862D9781B4A0A7600745516 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6862D9771B4A0A7600745516 /* CoreGraphics.framework */; };
+		6862D97A1B4A0A8600745516 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6862D9791B4A0A8600745516 /* MobileCoreServices.framework */; };
+		6862D97C1B4A0A9000745516 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6862D97B1B4A0A9000745516 /* QuartzCore.framework */; };
+		6862D97E1B4A0A9700745516 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6862D97D1B4A0A9700745516 /* Security.framework */; };
+		6862D9801B4A0AA300745516 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6862D97F1B4A0AA300745516 /* SystemConfiguration.framework */; };
+		6862D9821B4A0AB100745516 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6862D9811B4A0AB100745516 /* libz.dylib */; };
+		6862D9841B4A0ABA00745516 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6862D9831B4A0ABA00745516 /* libsqlite3.dylib */; };
+		6862D9861B4A0AD500745516 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6862D9851B4A0AD500745516 /* Accounts.framework */; };
+		6862D9881B4A0AE000745516 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6862D9871B4A0AE000745516 /* Social.framework */; };
+		6862D98B1B4A207700745516 /* 3-Sum-logo in Resources */ = {isa = PBXBuildFile; fileRef = 6862D98A1B4A207700745516 /* 3-Sum-logo */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6862D95A1B4A09F500745516 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6862D93C1B4A09F500745516 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6862D9431B4A09F500745516;
+			remoteInfo = "3Sum-v2";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6862D9441B4A09F500745516 /* 3Sum-v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "3Sum-v2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6862D9481B4A09F500745516 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6862D9491B4A09F500745516 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6862D94B1B4A09F500745516 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6862D94E1B4A09F500745516 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6862D9501B4A09F500745516 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6862D9531B4A09F500745516 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		6862D9591B4A09F500745516 /* 3Sum-v2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "3Sum-v2Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6862D95E1B4A09F500745516 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6862D95F1B4A09F500745516 /* _Sum_v2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _Sum_v2Tests.swift; sourceTree = "<group>"; };
+		6862D9691B4A0A2E00745516 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../../../../Downloads/parse-library-1.7.5/Bolts.framework"; sourceTree = "<group>"; };
+		6862D96A1B4A0A2E00745516 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../../../../Downloads/parse-library-1.7.5/Parse.framework"; sourceTree = "<group>"; };
+		6862D96B1B4A0A2E00745516 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "../../../../../Downloads/parse-library-1.7.5/ParseUI.framework"; sourceTree = "<group>"; };
+		6862D96F1B4A0A3C00745516 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		6862D9711B4A0A4500745516 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		6862D9731B4A0A5000745516 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		6862D9751B4A0A6D00745516 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		6862D9771B4A0A7600745516 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6862D9791B4A0A8600745516 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		6862D97B1B4A0A9000745516 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6862D97D1B4A0A9700745516 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		6862D97F1B4A0AA300745516 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		6862D9811B4A0AB100745516 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		6862D9831B4A0ABA00745516 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		6862D9851B4A0AD500745516 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		6862D9871B4A0AE000745516 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		6862D98A1B4A207700745516 /* 3-Sum-logo */ = {isa = PBXFileReference; lastKnownFileType = file; name = "3-Sum-logo"; path = "../../../../../../Google Drive/Startup/3-Sum/3-Sum-logo"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6862D9411B4A09F500745516 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6862D9881B4A0AE000745516 /* Social.framework in Frameworks */,
+				6862D9861B4A0AD500745516 /* Accounts.framework in Frameworks */,
+				6862D9841B4A0ABA00745516 /* libsqlite3.dylib in Frameworks */,
+				6862D9821B4A0AB100745516 /* libz.dylib in Frameworks */,
+				6862D9801B4A0AA300745516 /* SystemConfiguration.framework in Frameworks */,
+				6862D97E1B4A0A9700745516 /* Security.framework in Frameworks */,
+				6862D97C1B4A0A9000745516 /* QuartzCore.framework in Frameworks */,
+				6862D97A1B4A0A8600745516 /* MobileCoreServices.framework in Frameworks */,
+				6862D9721B4A0A4500745516 /* CoreLocation.framework in Frameworks */,
+				6862D9781B4A0A7600745516 /* CoreGraphics.framework in Frameworks */,
+				6862D9761B4A0A6D00745516 /* CFNetwork.framework in Frameworks */,
+				6862D9741B4A0A5000745516 /* StoreKit.framework in Frameworks */,
+				6862D9701B4A0A3C00745516 /* AudioToolbox.framework in Frameworks */,
+				6862D96C1B4A0A2E00745516 /* Bolts.framework in Frameworks */,
+				6862D96D1B4A0A2E00745516 /* Parse.framework in Frameworks */,
+				6862D96E1B4A0A2E00745516 /* ParseUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6862D9561B4A09F500745516 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6862D93B1B4A09F500745516 = {
+			isa = PBXGroup;
+			children = (
+				6862D9891B4A0AEF00745516 /* Frameworks */,
+				6862D9461B4A09F500745516 /* 3Sum-v2 */,
+				6862D95C1B4A09F500745516 /* 3Sum-v2Tests */,
+				6862D9451B4A09F500745516 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6862D9451B4A09F500745516 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6862D9441B4A09F500745516 /* 3Sum-v2.app */,
+				6862D9591B4A09F500745516 /* 3Sum-v2Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6862D9461B4A09F500745516 /* 3Sum-v2 */ = {
+			isa = PBXGroup;
+			children = (
+				6862D9491B4A09F500745516 /* AppDelegate.swift */,
+				6862D94B1B4A09F500745516 /* ViewController.swift */,
+				6862D94D1B4A09F500745516 /* Main.storyboard */,
+				6862D9501B4A09F500745516 /* Images.xcassets */,
+				6862D98A1B4A207700745516 /* 3-Sum-logo */,
+				6862D9521B4A09F500745516 /* LaunchScreen.xib */,
+				6862D9471B4A09F500745516 /* Supporting Files */,
+			);
+			path = "3Sum-v2";
+			sourceTree = "<group>";
+		};
+		6862D9471B4A09F500745516 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6862D9481B4A09F500745516 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6862D95C1B4A09F500745516 /* 3Sum-v2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6862D95F1B4A09F500745516 /* _Sum_v2Tests.swift */,
+				6862D95D1B4A09F500745516 /* Supporting Files */,
+			);
+			path = "3Sum-v2Tests";
+			sourceTree = "<group>";
+		};
+		6862D95D1B4A09F500745516 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6862D95E1B4A09F500745516 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6862D9891B4A0AEF00745516 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6862D9871B4A0AE000745516 /* Social.framework */,
+				6862D9851B4A0AD500745516 /* Accounts.framework */,
+				6862D9831B4A0ABA00745516 /* libsqlite3.dylib */,
+				6862D9811B4A0AB100745516 /* libz.dylib */,
+				6862D97F1B4A0AA300745516 /* SystemConfiguration.framework */,
+				6862D97D1B4A0A9700745516 /* Security.framework */,
+				6862D97B1B4A0A9000745516 /* QuartzCore.framework */,
+				6862D9791B4A0A8600745516 /* MobileCoreServices.framework */,
+				6862D9771B4A0A7600745516 /* CoreGraphics.framework */,
+				6862D9751B4A0A6D00745516 /* CFNetwork.framework */,
+				6862D9731B4A0A5000745516 /* StoreKit.framework */,
+				6862D9711B4A0A4500745516 /* CoreLocation.framework */,
+				6862D96F1B4A0A3C00745516 /* AudioToolbox.framework */,
+				6862D9691B4A0A2E00745516 /* Bolts.framework */,
+				6862D96A1B4A0A2E00745516 /* Parse.framework */,
+				6862D96B1B4A0A2E00745516 /* ParseUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6862D9431B4A09F500745516 /* 3Sum-v2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6862D9631B4A09F500745516 /* Build configuration list for PBXNativeTarget "3Sum-v2" */;
+			buildPhases = (
+				6862D9401B4A09F500745516 /* Sources */,
+				6862D9411B4A09F500745516 /* Frameworks */,
+				6862D9421B4A09F500745516 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "3Sum-v2";
+			productName = "3Sum-v2";
+			productReference = 6862D9441B4A09F500745516 /* 3Sum-v2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6862D9581B4A09F500745516 /* 3Sum-v2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6862D9661B4A09F500745516 /* Build configuration list for PBXNativeTarget "3Sum-v2Tests" */;
+			buildPhases = (
+				6862D9551B4A09F500745516 /* Sources */,
+				6862D9561B4A09F500745516 /* Frameworks */,
+				6862D9571B4A09F500745516 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6862D95B1B4A09F500745516 /* PBXTargetDependency */,
+			);
+			name = "3Sum-v2Tests";
+			productName = "3Sum-v2Tests";
+			productReference = 6862D9591B4A09F500745516 /* 3Sum-v2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6862D93C1B4A09F500745516 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = com.skylord.com;
+				TargetAttributes = {
+					6862D9431B4A09F500745516 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					6862D9581B4A09F500745516 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 6862D9431B4A09F500745516;
+					};
+				};
+			};
+			buildConfigurationList = 6862D93F1B4A09F500745516 /* Build configuration list for PBXProject "3Sum-v2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6862D93B1B4A09F500745516;
+			productRefGroup = 6862D9451B4A09F500745516 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6862D9431B4A09F500745516 /* 3Sum-v2 */,
+				6862D9581B4A09F500745516 /* 3Sum-v2Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6862D9421B4A09F500745516 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6862D94F1B4A09F500745516 /* Main.storyboard in Resources */,
+				6862D98B1B4A207700745516 /* 3-Sum-logo in Resources */,
+				6862D9541B4A09F500745516 /* LaunchScreen.xib in Resources */,
+				6862D9511B4A09F500745516 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6862D9571B4A09F500745516 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6862D9401B4A09F500745516 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6862D94C1B4A09F500745516 /* ViewController.swift in Sources */,
+				6862D94A1B4A09F500745516 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6862D9551B4A09F500745516 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6862D9601B4A09F500745516 /* _Sum_v2Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6862D95B1B4A09F500745516 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6862D9431B4A09F500745516 /* 3Sum-v2 */;
+			targetProxy = 6862D95A1B4A09F500745516 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6862D94D1B4A09F500745516 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6862D94E1B4A09F500745516 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6862D9521B4A09F500745516 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6862D9531B4A09F500745516 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6862D9611B4A09F500745516 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6862D9621B4A09F500745516 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6862D9641B4A09F500745516 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/ambrish/Downloads/parse-library-1.7.5",
+				);
+				INFOPLIST_FILE = "3Sum-v2/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6862D9651B4A09F500745516 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/ambrish/Downloads/parse-library-1.7.5",
+				);
+				INFOPLIST_FILE = "3Sum-v2/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6862D9671B4A09F500745516 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "3Sum-v2Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/3Sum-v2.app/3Sum-v2";
+			};
+			name = Debug;
+		};
+		6862D9681B4A09F500745516 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "3Sum-v2Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/3Sum-v2.app/3Sum-v2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6862D93F1B4A09F500745516 /* Build configuration list for PBXProject "3Sum-v2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6862D9611B4A09F500745516 /* Debug */,
+				6862D9621B4A09F500745516 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6862D9631B4A09F500745516 /* Build configuration list for PBXNativeTarget "3Sum-v2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6862D9641B4A09F500745516 /* Debug */,
+				6862D9651B4A09F500745516 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6862D9661B4A09F500745516 /* Build configuration list for PBXNativeTarget "3Sum-v2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6862D9671B4A09F500745516 /* Debug */,
+				6862D9681B4A09F500745516 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6862D93C1B4A09F500745516 /* Project object */;
+}
