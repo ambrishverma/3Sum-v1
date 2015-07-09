@@ -221,7 +221,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Something Else .." textAlignment="center" minimumFontSize="17" id="pW0-uy-jXH">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Something Else .." minimumFontSize="17" id="pW0-uy-jXH">
                                 <rect key="frame" x="16" y="340" width="288" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -237,6 +237,9 @@
                                     <color key="titleColor" red="0.98749816810000002" green="1" blue="0.96617353159999997" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendAction:" destination="t4w-Gd-dFE" eventType="touchUpInside" id="fUR-79-JqZ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=".. Skills you know'em best for" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WjD-h3-Hmt">
                                 <rect key="frame" x="47" y="85" width="226" height="21"/>
@@ -249,6 +252,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="1zd-Fu-3FF"/>
+                    <connections>
+                        <outlet property="skillField" destination="pW0-uy-jXH" id="4S7-fj-xTR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="956-8D-PQ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

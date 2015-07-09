@@ -27,18 +27,27 @@ class ReferToViewController: UIViewController {
     
 
     @IBAction func nextAction(sender: AnyObject) {
-        self.performSegueWithIdentifier("referredBizInfo", sender: self)
+        if (count(sendToPhoneField.text.utf16) < 10 || count(sendToEmailField.text.utf16) < 4) {
+            var alert = UIAlertView(title: "Invalid", message: "Provide proper phone number or emails for your contact", delegate: self, cancelButtonTitle: "OK")
+            alert.show()
+        } else {
+            self.performSegueWithIdentifier("referredBizInfo", sender: self)
+        }
+        
     }
     
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        var referredBizVc: ReferredBizViewController = segue.destinationViewController as! ReferredBizViewController
+        
+        referredBizVc.sendToEmail = sendToEmailField.text
+        referredBizVc.sendToPhoneNumber = sendToPhoneField.text
+        
     }
-    */
+    
 
 }

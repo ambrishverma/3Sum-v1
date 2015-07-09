@@ -10,7 +10,8 @@ import UIKit
 
 class ReferredBizViewController: UIViewController {
 
-    
+    var sendToPhoneNumber: String = ""
+    var sendToEmail: String = ""
     
     @IBOutlet weak var referredBizNameField: UITextField!
     
@@ -32,18 +33,29 @@ class ReferredBizViewController: UIViewController {
 
     
     @IBAction func nextAction(sender: AnyObject) {
-        self.performSegueWithIdentifier("referredSkills", sender: self)
+        if (count(referredPhoneNumberField.text.utf16) < 10 || count(referredEmailField.text.utf16) < 4) {
+            var alert = UIAlertView(title: "Invalid", message: "Provide proper phone number or emails person/business you are referring", delegate: self, cancelButtonTitle: "OK")
+            alert.show()
+        } else {
+            self.performSegueWithIdentifier("referredSkills", sender: self)
+        }
+        
     }
 
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        var referredSkillsVc: ReferredSkillsViewController = segue.destinationViewController as! ReferredSkillsViewController
+
+        referredSkillsVc.refData.referreePhone = sendToPhoneNumber
+        referredSkillsVc.refData.referreeEmail = sendToEmail
+        
+        referredSkillsVc.refData.referredBizPhone = referredPhoneNumberField.text
+        referredSkillsVc.refData.referredBizEmail = referredEmailField.text
+        referredSkillsVc.refData.referredBizName = referredBizNameField.text
     }
-    */
+
 
 }
