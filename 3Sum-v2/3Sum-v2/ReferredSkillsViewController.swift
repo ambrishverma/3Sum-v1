@@ -64,8 +64,8 @@ class ReferredSkillsViewController: UIViewController {
         println("sending referral")
         
         
-        if (count(skillField.text.utf16) < 3) {
-            var alert = UIAlertView(title: "Invalid", message: "Sending generic referral, else please select/type appropriate skills", delegate: self, cancelButtonTitle: "OK")
+        if (count(skillField.text.utf16) < 2) {
+            var alert = UIAlertView(title: "Invalid", message: "Sending generic reference, else please select/type appropriate skills", delegate: self, cancelButtonTitle: "OK")
             skillField.text = "General"
             alert.show()
         } else {	

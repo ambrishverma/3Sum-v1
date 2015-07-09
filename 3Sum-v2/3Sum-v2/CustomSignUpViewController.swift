@@ -53,9 +53,13 @@ class CustomSignUpViewController: UIViewController {
         var username = self.usernameField.text
         var password = self.passwordField.text
         var email = self.emailField.text
-        
-        if (count(username.utf16) < 4 || count(password.utf16) < 5 || count(email.utf16) < 8) {
-            var alert = UIAlertView(title: "Invalid", message: "Username must be longer than 4 and Password must be longer than 5 characters", delegate: self, cancelButtonTitle: "OK")
+    
+        // user must provide a valid phone or a valid email address
+        if ((count(username.utf16) < 10  || !username.isPhone) ||
+            (count(email.utf16) > 0 && (count(email.utf16) < 5 || !email.isEmail)) ||
+             count(password.utf16) < 5)
+        {
+            var alert = UIAlertView(title: "Invalid", message: "Username must be valid phone number and Password must be longer than 5 characters", delegate: self, cancelButtonTitle: "OK")
             alert.show()
         } else {
             self.actInd.startAnimating()

@@ -50,8 +50,10 @@ class CustomLoginViewController: UIViewController {
         var username = self.usernameField.text
         var password = self.passwordField.text
         
-        if (count(username.utf16) < 4 || count(password.utf16) < 5) {
-            var alert = UIAlertView(title: "Invalid", message: "Username must be longer than 4 and Password must be longer than 5 characters", delegate: self, cancelButtonTitle: "OK")
+        if ((count(username.utf16) > 0 && (count(username.utf16) < 10  || !username.isPhone)) ||
+        count(password.utf16) < 5)
+        {
+            var alert = UIAlertView(title: "Invalid", message: "Username must be valid phone number and Password must be longer than 5 characters", delegate: self, cancelButtonTitle: "OK")
             alert.show()
         } else {
             self.actInd.startAnimating()

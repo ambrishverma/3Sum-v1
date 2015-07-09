@@ -33,8 +33,12 @@ class ReferredBizViewController: UIViewController {
 
     
     @IBAction func nextAction(sender: AnyObject) {
-        if (count(referredPhoneNumberField.text.utf16) < 10 || count(referredEmailField.text.utf16) < 4) {
-            var alert = UIAlertView(title: "Invalid", message: "Provide proper phone number or emails person/business you are referring", delegate: self, cancelButtonTitle: "OK")
+        if (count(referredBizNameField.text.utf16) < 2 ||
+            (count(referredPhoneNumberField.text.utf16) > 0 && (count(referredPhoneNumberField.text.utf16) < 10  || !referredPhoneNumberField.text.isPhone)) ||
+            (count(referredEmailField.text.utf16) > 0 && (count(referredEmailField.text.utf16) < 5 || !referredEmailField.text.isEmail))
+         )
+        {
+            var alert = UIAlertView(title: "Invalid", message: "Provide business/person name and a valid phone number/email address you are referring", delegate: self, cancelButtonTitle: "OK")
             alert.show()
         } else {
             self.performSegueWithIdentifier("referredSkills", sender: self)
