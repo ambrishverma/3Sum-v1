@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		685102421B4E05910002ED4B /* piping.png in Resources */ = {isa = PBXBuildFile; fileRef = 685102411B4E05910002ED4B /* piping.png */; };
+		685102441B4E06F50002ED4B /* broom.png in Resources */ = {isa = PBXBuildFile; fileRef = 685102431B4E06F50002ED4B /* broom.png */; };
+		685102461B4E079B0002ED4B /* maintenance.png in Resources */ = {isa = PBXBuildFile; fileRef = 685102451B4E079B0002ED4B /* maintenance.png */; };
+		685102481B4E08730002ED4B /* ReferToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685102471B4E08730002ED4B /* ReferToViewController.swift */; };
+		6851024A1B4E08950002ED4B /* ReferredBizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685102491B4E08950002ED4B /* ReferredBizViewController.swift */; };
+		6851024C1B4E08A90002ED4B /* ReferredSkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6851024B1B4E08A90002ED4B /* ReferredSkillsViewController.swift */; };
 		6862D94A1B4A09F500745516 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6862D9491B4A09F500745516 /* AppDelegate.swift */; };
 		6862D94C1B4A09F500745516 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6862D94B1B4A09F500745516 /* ViewController.swift */; };
 		6862D94F1B4A09F500745516 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6862D94D1B4A09F500745516 /* Main.storyboard */; };
@@ -54,6 +60,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		685102411B4E05910002ED4B /* piping.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = piping.png; path = Images.xcassets/piping.png; sourceTree = "<group>"; };
+		685102431B4E06F50002ED4B /* broom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = broom.png; path = Images.xcassets/broom.png; sourceTree = "<group>"; };
+		685102451B4E079B0002ED4B /* maintenance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = maintenance.png; path = Images.xcassets/maintenance.png; sourceTree = "<group>"; };
+		685102471B4E08730002ED4B /* ReferToViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferToViewController.swift; sourceTree = "<group>"; };
+		685102491B4E08950002ED4B /* ReferredBizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferredBizViewController.swift; sourceTree = "<group>"; };
+		6851024B1B4E08A90002ED4B /* ReferredSkillsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferredSkillsViewController.swift; sourceTree = "<group>"; };
 		6862D9441B4A09F500745516 /* 3Sum-v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "3Sum-v2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6862D9481B4A09F500745516 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6862D9491B4A09F500745516 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -151,11 +163,14 @@
 			isa = PBXGroup;
 			children = (
 				6862D9491B4A09F500745516 /* AppDelegate.swift */,
-				6862D94B1B4A09F500745516 /* ViewController.swift */,
 				6862D94D1B4A09F500745516 /* Main.storyboard */,
+				6862D94B1B4A09F500745516 /* ViewController.swift */,
 				6862D98E1B4A5D7B00745516 /* CustomLoginViewController.swift */,
 				6862D9961B4A61EE00745516 /* CustomSignUpViewController.swift */,
 				6862D9D61B4B68BF00745516 /* ManageViewController.swift */,
+				685102471B4E08730002ED4B /* ReferToViewController.swift */,
+				685102491B4E08950002ED4B /* ReferredBizViewController.swift */,
+				6851024B1B4E08A90002ED4B /* ReferredSkillsViewController.swift */,
 				6862D9501B4A09F500745516 /* Images.xcassets */,
 				6862D9D81B4B68F700745516 /* Images */,
 				6862D9521B4A09F500745516 /* LaunchScreen.xib */,
@@ -215,6 +230,9 @@
 		6862D9D81B4B68F700745516 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				685102451B4E079B0002ED4B /* maintenance.png */,
+				685102431B4E06F50002ED4B /* broom.png */,
+				685102411B4E05910002ED4B /* piping.png */,
 				6862D9D41B4B56E200745516 /* shop.png */,
 				6862D9D21B4B564100745516 /* chat.png */,
 				6862D9D01B4B530700745516 /* gift.png */,
@@ -277,6 +295,7 @@
 				TargetAttributes = {
 					6862D9431B4A09F500745516 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = TV3L444A76;
 					};
 					6862D9581B4A09F500745516 = {
 						CreatedOnToolsVersion = 6.4;
@@ -311,14 +330,17 @@
 				6862D9C71B4A843000745516 /* refer.jpg in Resources */,
 				6862D9D11B4B530700745516 /* gift.png in Resources */,
 				6862D9CB1B4A85AA00745516 /* manage.jpg in Resources */,
+				685102441B4E06F50002ED4B /* broom.png in Resources */,
 				6862D9D31B4B564100745516 /* chat.png in Resources */,
 				6862D94F1B4A09F500745516 /* Main.storyboard in Resources */,
 				6862D9D51B4B56E200745516 /* shop.png in Resources */,
 				6862D9CF1B4B522200745516 /* refer-wire.jpg in Resources */,
 				6862D98B1B4A207700745516 /* 3-Sum-logo in Resources */,
+				685102421B4E05910002ED4B /* piping.png in Resources */,
 				6862D9541B4A09F500745516 /* LaunchScreen.xib in Resources */,
 				6862D9511B4A09F500745516 /* Images.xcassets in Resources */,
 				6862D9CD1B4B510900745516 /* refer-blue.jpg in Resources */,
+				685102461B4E079B0002ED4B /* maintenance.png in Resources */,
 				6862D9C91B4A84E300745516 /* redeem.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,9 +360,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6862D98F1B4A5D7B00745516 /* CustomLoginViewController.swift in Sources */,
+				6851024C1B4E08A90002ED4B /* ReferredSkillsViewController.swift in Sources */,
 				6862D94C1B4A09F500745516 /* ViewController.swift in Sources */,
 				6862D9971B4A61EE00745516 /* CustomSignUpViewController.swift in Sources */,
+				6851024A1B4E08950002ED4B /* ReferredBizViewController.swift in Sources */,
 				6862D9D71B4B68BF00745516 /* ManageViewController.swift in Sources */,
+				685102481B4E08730002ED4B /* ReferToViewController.swift in Sources */,
 				6862D94A1B4A09F500745516 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,6 +493,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/ambrish/Downloads/parse-library-1.7.5",
@@ -475,6 +502,8 @@
 				INFOPLIST_FILE = "3Sum-v2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -482,6 +511,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/ambrish/Downloads/parse-library-1.7.5",
@@ -489,6 +520,8 @@
 				INFOPLIST_FILE = "3Sum-v2/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -545,6 +578,7 @@
 				6862D9651B4A09F500745516 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6862D9661B4A09F500745516 /* Build configuration list for PBXNativeTarget "3Sum-v2Tests" */ = {
 			isa = XCConfigurationList;
@@ -553,6 +587,7 @@
 				6862D9681B4A09F500745516 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

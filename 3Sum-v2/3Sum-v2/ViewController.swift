@@ -121,6 +121,12 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         self.logoutButton.hidden = false;
     }
     
+    @IBAction func referAction(sender: AnyObject) {
+        println("manage services")
+        self.performSegueWithIdentifier("referTo", sender: self)
+    }
+
+    
     
     @IBAction func manageAction(sender: AnyObject) {
         println("manage services")
