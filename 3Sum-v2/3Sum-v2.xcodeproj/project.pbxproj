@@ -38,7 +38,6 @@
 		6862D9841B4A0ABA00745516 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 6862D9831B4A0ABA00745516 /* libsqlite3.dylib */; };
 		6862D9861B4A0AD500745516 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6862D9851B4A0AD500745516 /* Accounts.framework */; };
 		6862D9881B4A0AE000745516 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6862D9871B4A0AE000745516 /* Social.framework */; };
-		6862D98B1B4A207700745516 /* 3-Sum-logo in Resources */ = {isa = PBXBuildFile; fileRef = 6862D98A1B4A207700745516 /* 3-Sum-logo */; };
 		6862D98F1B4A5D7B00745516 /* CustomLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6862D98E1B4A5D7B00745516 /* CustomLoginViewController.swift */; };
 		6862D9971B4A61EE00745516 /* CustomSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6862D9961B4A61EE00745516 /* CustomSignUpViewController.swift */; };
 		6862D9C71B4A843000745516 /* refer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6862D9C61B4A843000745516 /* refer.jpg */; };
@@ -98,7 +97,6 @@
 		6862D9831B4A0ABA00745516 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		6862D9851B4A0AD500745516 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		6862D9871B4A0AE000745516 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		6862D98A1B4A207700745516 /* 3-Sum-logo */ = {isa = PBXFileReference; lastKnownFileType = file; name = "3-Sum-logo"; path = "../../../../../../Google Drive/Startup/3-Sum/3-Sum-logo"; sourceTree = "<group>"; };
 		6862D98E1B4A5D7B00745516 /* CustomLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomLoginViewController.swift; sourceTree = "<group>"; };
 		6862D9961B4A61EE00745516 /* CustomSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSignUpViewController.swift; sourceTree = "<group>"; };
 		6862D9C61B4A843000745516 /* refer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = refer.jpg; path = Images.xcassets/refer.jpg; sourceTree = "<group>"; };
@@ -250,7 +248,6 @@
 				6862D9CA1B4A85AA00745516 /* manage.jpg */,
 				6862D9C81B4A84E300745516 /* redeem.jpg */,
 				6862D9C61B4A843000745516 /* refer.jpg */,
-				6862D98A1B4A207700745516 /* 3-Sum-logo */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -344,7 +341,6 @@
 				6862D94F1B4A09F500745516 /* Main.storyboard in Resources */,
 				6862D9D51B4B56E200745516 /* shop.png in Resources */,
 				6862D9CF1B4B522200745516 /* refer-wire.jpg in Resources */,
-				6862D98B1B4A207700745516 /* 3-Sum-logo in Resources */,
 				685102421B4E05910002ED4B /* piping.png in Resources */,
 				6862D9541B4A09F500745516 /* LaunchScreen.xib in Resources */,
 				6862D9511B4A09F500745516 /* Images.xcassets in Resources */,
@@ -505,6 +501,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -512,6 +509,7 @@
 					"/Users/ambrish/Downloads/parse-library-1.7.5",
 				);
 				INFOPLIST_FILE = "3Sum-v2/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -523,6 +521,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -530,6 +529,7 @@
 					"/Users/ambrish/Downloads/parse-library-1.7.5",
 				);
 				INFOPLIST_FILE = "3Sum-v2/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

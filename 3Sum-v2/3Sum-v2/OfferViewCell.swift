@@ -12,7 +12,6 @@ class OfferViewCell: UITableViewCell {
 
     @IBOutlet weak var thumbImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var distanceLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
@@ -44,7 +43,6 @@ class OfferViewCell: UITableViewCell {
     func clearCell()
     {
         self.nameLabel.text = ""
-        self.distanceLabel.text = ""
         self.phoneLabel.text = ""
         self.emailLabel.text  = ""
         self.addressLabel.text = ""

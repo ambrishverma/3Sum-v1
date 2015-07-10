@@ -12,6 +12,7 @@ import ParseUI
 
 class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate {
     
+    @IBOutlet weak var mainLogoImageView: UIImageView!
     @IBOutlet weak var loginSignUpButton: UIButton!
     
     @IBOutlet weak var logoutButton: UIButton!
@@ -31,6 +32,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+        self.mainLogoImageView.image = UIImage(named: "3-sum")
         if (PFUser.currentUser() == nil) {
             self.loginSignUpButton.hidden = false;
             self.logoutButton.hidden = true;

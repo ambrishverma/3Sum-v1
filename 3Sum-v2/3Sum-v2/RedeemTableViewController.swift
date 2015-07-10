@@ -18,8 +18,8 @@ class RedeemTableViewController: UITableViewController, UITableViewDataSource, U
 
         self.tableView.dataSource = self;
         self.tableView.delegate = self;
-        self.tableView.rowHeight = UITableViewAutomaticDimension;
-        self.tableView.estimatedRowHeight = 100.0
+        //self.tableView.rowHeight = UITableViewAutomaticDimension;
+        self.tableView.estimatedRowHeight = 200.0
         
         // load offers
         println("loading offers")
@@ -45,11 +45,12 @@ class RedeemTableViewController: UITableViewController, UITableViewDataSource, U
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        self.tableView.rowHeight = UITableViewAutomaticDimension;
-        self.tableView.estimatedRowHeight = 100.0
+        //self.tableView.rowHeight = UITableViewAutomaticDimension;
+        //self.tableView.estimatedRowHeight = 200.0
       
         println("needed cells: \(self.referralObjects.count)")
         return self.referralObjects.count
+        //return 5
     }
 
     
@@ -63,11 +64,13 @@ class RedeemTableViewController: UITableViewController, UITableViewDataSource, U
         var object: PFObject = self.referralObjects.objectAtIndex(indexPath.row) as! PFObject
         
         cell.nameLabel.text = object["ReferredBizName"] as? String
-        cell.referrerPhoneLabel.text = object["ReferrerPhone"] as? String
+        let referredByStr = object["ReferrerPhone"] as! String
+        cell.referrerPhoneLabel.text = "Referred By: \(referredByStr)"
         cell.phoneLabel.text = object["ReferredBizPhone"] as? String
         cell.emailLabel.text = object["ReferredBizEmail"] as? String
         cell.skillsLabel.text = object["ReferredBizSkills"] as? String
         cell.thumbImageView.image = UIImage(named: "share")
+
 /*        cell.addressLabel.text = object["ReferredBizName"] as? String
         cell.offerDealLabel.text = object["ReferredBizName"] as? String
         cell.distanceLabel.text = object["ReferredBizName"] as? String
