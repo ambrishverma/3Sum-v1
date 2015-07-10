@@ -13,6 +13,9 @@
 		685102481B4E08730002ED4B /* ReferToViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685102471B4E08730002ED4B /* ReferToViewController.swift */; };
 		6851024A1B4E08950002ED4B /* ReferredBizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685102491B4E08950002ED4B /* ReferredBizViewController.swift */; };
 		6851024C1B4E08A90002ED4B /* ReferredSkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6851024B1B4E08A90002ED4B /* ReferredSkillsViewController.swift */; };
+		6851024E1B4F0BFD0002ED4B /* RedeemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6851024D1B4F0BFD0002ED4B /* RedeemTableViewController.swift */; };
+		685102501B4F32700002ED4B /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 6851024F1B4F32700002ED4B /* share.png */; };
+		685102521B4F38B50002ED4B /* OfferViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685102511B4F38B50002ED4B /* OfferViewCell.swift */; };
 		6862D94A1B4A09F500745516 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6862D9491B4A09F500745516 /* AppDelegate.swift */; };
 		6862D94C1B4A09F500745516 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6862D94B1B4A09F500745516 /* ViewController.swift */; };
 		6862D94F1B4A09F500745516 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6862D94D1B4A09F500745516 /* Main.storyboard */; };
@@ -66,6 +69,9 @@
 		685102471B4E08730002ED4B /* ReferToViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferToViewController.swift; sourceTree = "<group>"; };
 		685102491B4E08950002ED4B /* ReferredBizViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferredBizViewController.swift; sourceTree = "<group>"; };
 		6851024B1B4E08A90002ED4B /* ReferredSkillsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferredSkillsViewController.swift; sourceTree = "<group>"; };
+		6851024D1B4F0BFD0002ED4B /* RedeemTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedeemTableViewController.swift; sourceTree = "<group>"; };
+		6851024F1B4F32700002ED4B /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = share.png; path = Images.xcassets/share.png; sourceTree = "<group>"; };
+		685102511B4F38B50002ED4B /* OfferViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferViewCell.swift; sourceTree = "<group>"; };
 		6862D9441B4A09F500745516 /* 3Sum-v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "3Sum-v2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6862D9481B4A09F500745516 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6862D9491B4A09F500745516 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +177,8 @@
 				685102471B4E08730002ED4B /* ReferToViewController.swift */,
 				685102491B4E08950002ED4B /* ReferredBizViewController.swift */,
 				6851024B1B4E08A90002ED4B /* ReferredSkillsViewController.swift */,
+				6851024D1B4F0BFD0002ED4B /* RedeemTableViewController.swift */,
+				685102511B4F38B50002ED4B /* OfferViewCell.swift */,
 				6862D9501B4A09F500745516 /* Images.xcassets */,
 				6862D9D81B4B68F700745516 /* Images */,
 				6862D9521B4A09F500745516 /* LaunchScreen.xib */,
@@ -230,6 +238,7 @@
 		6862D9D81B4B68F700745516 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				6851024F1B4F32700002ED4B /* share.png */,
 				685102451B4E079B0002ED4B /* maintenance.png */,
 				685102431B4E06F50002ED4B /* broom.png */,
 				685102411B4E05910002ED4B /* piping.png */,
@@ -342,6 +351,7 @@
 				6862D9CD1B4B510900745516 /* refer-blue.jpg in Resources */,
 				685102461B4E079B0002ED4B /* maintenance.png in Resources */,
 				6862D9C91B4A84E300745516 /* redeem.jpg in Resources */,
+				685102501B4F32700002ED4B /* share.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,11 +370,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6862D98F1B4A5D7B00745516 /* CustomLoginViewController.swift in Sources */,
+				6851024E1B4F0BFD0002ED4B /* RedeemTableViewController.swift in Sources */,
 				6851024C1B4E08A90002ED4B /* ReferredSkillsViewController.swift in Sources */,
 				6862D94C1B4A09F500745516 /* ViewController.swift in Sources */,
 				6862D9971B4A61EE00745516 /* CustomSignUpViewController.swift in Sources */,
 				6851024A1B4E08950002ED4B /* ReferredBizViewController.swift in Sources */,
 				6862D9D71B4B68BF00745516 /* ManageViewController.swift in Sources */,
+				685102521B4F38B50002ED4B /* OfferViewCell.swift in Sources */,
 				685102481B4E08730002ED4B /* ReferToViewController.swift in Sources */,
 				6862D94A1B4A09F500745516 /* AppDelegate.swift in Sources */,
 			);

@@ -122,11 +122,14 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     }
     
     @IBAction func referAction(sender: AnyObject) {
-        println("manage services")
+        println("refer action")
         self.performSegueWithIdentifier("referTo", sender: self)
     }
-
     
+    @IBAction func redeemAction(sender: AnyObject) {
+        println("redeem action")
+        self.performSegueWithIdentifier("redeem", sender: self)
+    }
     
     @IBAction func manageAction(sender: AnyObject) {
         println("manage services")

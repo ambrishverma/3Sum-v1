@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--referToVC-->
+        <!--Send Referral To-->
         <scene sceneID="m3o-8L-dEe">
             <objects>
-                <viewController storyboardIdentifier="referToVC" title="referToVC" id="bUo-LW-F8A" customClass="ReferToViewController" customModule="_Sum_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="referToVC" title="Send Referral To" id="bUo-LW-F8A" customClass="ReferToViewController" customModule="_Sum_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ijf-tv-6eh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,10 +62,10 @@
             </objects>
             <point key="canvasLocation" x="1088" y="-367"/>
         </scene>
-        <!--Referred Biz View Controller-->
+        <!--Referred Business Info-->
         <scene sceneID="KuR-TE-7IO">
             <objects>
-                <viewController storyboardIdentifier="ReferredBizInfoVC" id="QKj-ZI-uI2" customClass="ReferredBizViewController" customModule="_Sum_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReferredBizInfoVC" title="Referred Business Info" id="QKj-ZI-uI2" customClass="ReferredBizViewController" customModule="_Sum_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nFN-0p-7QD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -126,12 +126,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LEZ-po-lpj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1480" y="-367"/>
+            <point key="canvasLocation" x="1492" y="-367"/>
         </scene>
-        <!--referredSkillsVC-->
+        <!--Referred Skills-->
         <scene sceneID="3rb-Se-AJ6">
             <objects>
-                <viewController title="referredSkillsVC" id="t4w-Gd-dFE" customClass="ReferredSkillsViewController" customModule="_Sum_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Referred Skills" id="t4w-Gd-dFE" customClass="ReferredSkillsViewController" customModule="_Sum_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R2J-Qy-LKo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -263,7 +263,7 @@
         <!--3 - Sum-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="_Sum_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="3sumVC" title="3 - Sum" id="vXZ-lx-hvc" customClass="ViewController" customModule="_Sum_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -348,6 +348,16 @@
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="EgB-7e-8qN">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="98"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                            <state key="normal">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="redeemAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="zOc-Fc-cEp"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -400,16 +410,119 @@
                         <outlet property="logoutButton" destination="ZWD-qb-JG5" id="pxc-Rr-Qbw"/>
                         <segue destination="jan-Qj-GVJ" kind="push" identifier="login" id="vNM-hM-MNx"/>
                         <segue destination="bUo-LW-F8A" kind="push" identifier="referTo" id="3J8-Bb-uB5"/>
+                        <segue destination="m0G-5d-aXB" kind="push" identifier="redeem" id="w5m-5v-gO0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="628" y="353"/>
+            <point key="canvasLocation" x="618" y="354"/>
         </scene>
-        <!--Custom Login View Controller-->
+        <!--Redeem Referrals-->
+        <scene sceneID="F87-qH-dS6">
+            <objects>
+                <tableViewController storyboardIdentifier="redeemVC" title="Redeem Referrals" id="m0G-5d-aXB" customClass="RedeemTableViewController" customModule="_Sum_v2" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="103" sectionHeaderHeight="22" sectionFooterHeight="22" id="nkN-cd-kYK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="offerCell" rowHeight="103" id="Hhv-HL-Ehq" customClass="OfferViewCell" customModule="_Sum_v2" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="86" width="320" height="103"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hhv-HL-Ehq" id="uH8-bJ-DPo">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="102"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="share.png" id="m7z-2c-zTa">
+                                            <rect key="frame" x="8" y="8" width="70" height="70"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Wais Wazeri Real Estate Agent" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7PL-mF-fsV">
+                                            <rect key="frame" x="86" y="8" width="183" height="15"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="0.07 mi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ntE-fo-Dve">
+                                            <rect key="frame" x="277" y="8" width="35" height="12"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Real Estate, Mortgage, Property Management" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="i97-YM-zaQ">
+                                            <rect key="frame" x="86" y="66" width="226" height="12"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="408-480-2264" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jgp-Y1-iTS">
+                                            <rect key="frame" x="86" y="37" width="125" height="12"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="waiswazeri@3sum.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aE3-CS-H4t">
+                                            <rect key="frame" x="86" y="22" width="125" height="12"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="88 Division St Mission Bay" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1Mq-ds-tiJ">
+                                            <rect key="frame" x="86" y="50" width="125" height="12"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10% Off" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0cE-eV-akd">
+                                            <rect key="frame" x="266" y="28" width="46" height="34"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="11"/>
+                                            <color key="textColor" red="0.0" green="0.80392163989999998" blue="0.074509806930000005" alpha="1" colorSpace="deviceRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Referred by: Ambrish Verma" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Tt2-gc-xcd">
+                                            <rect key="frame" x="86" y="82" width="226" height="12"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="addressLabel" destination="1Mq-ds-tiJ" id="nnc-g9-Jd0"/>
+                                    <outlet property="distanceLabel" destination="ntE-fo-Dve" id="60f-Kr-apB"/>
+                                    <outlet property="emailLabel" destination="aE3-CS-H4t" id="9aZ-Xu-z1q"/>
+                                    <outlet property="nameLabel" destination="7PL-mF-fsV" id="cS0-3X-odk"/>
+                                    <outlet property="offerDealLabel" destination="0cE-eV-akd" id="PkR-Bg-WJF"/>
+                                    <outlet property="phoneLabel" destination="jgp-Y1-iTS" id="3fF-30-Ssy"/>
+                                    <outlet property="referrerPhoneLabel" destination="Tt2-gc-xcd" id="ydM-ry-uYm"/>
+                                    <outlet property="skillsLabel" destination="i97-YM-zaQ" id="xCx-w9-kDz"/>
+                                    <outlet property="thumbImageView" destination="m7z-2c-zTa" id="NSg-jo-n0z"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="m0G-5d-aXB" id="4Fe-nd-Qpm"/>
+                            <outlet property="delegate" destination="m0G-5d-aXB" id="Kpe-wy-u4z"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="ahY-tn-0I2"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zP9-M4-O86" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1088" y="285"/>
+        </scene>
+        <!--Login to 3 - Sum-->
         <scene sceneID="TVa-rP-3P2">
             <objects>
-                <viewController storyboardIdentifier="loginVC" id="jan-Qj-GVJ" customClass="CustomLoginViewController" customModule="_Sum_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginVC" title="Login to 3 - Sum" id="jan-Qj-GVJ" customClass="CustomLoginViewController" customModule="_Sum_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zqj-m4-VJr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -475,12 +588,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wMQ-6p-8Aa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1125" y="353"/>
+            <point key="canvasLocation" x="618" y="1052"/>
         </scene>
-        <!--Manage View Controller-->
+        <!--Manage Services-->
         <scene sceneID="YeY-of-euK">
             <objects>
-                <viewController storyboardIdentifier="manageVC" id="rAG-eT-WY4" customClass="ManageViewController" customModule="_Sum_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="manageVC" title="Manage Services" id="rAG-eT-WY4" customClass="ManageViewController" customModule="_Sum_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GUg-h9-Iwu">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -548,12 +661,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hAi-ur-bvg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1125" y="1010"/>
+            <point key="canvasLocation" x="1088" y="922"/>
         </scene>
-        <!--Custom Sign Up View Controller-->
+        <!--Sign Up to 3 - Sum -->
         <scene sceneID="ENv-1M-s3E">
             <objects>
-                <viewController storyboardIdentifier="signupVC" id="1Vt-jd-j8w" customClass="CustomSignUpViewController" customModule="_Sum_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signupVC" title="Sign Up to 3 - Sum " id="1Vt-jd-j8w" customClass="CustomSignUpViewController" customModule="_Sum_v2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ugb-b1-5CD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -606,7 +719,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ezL-uj-weT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1550" y="350"/>
+            <point key="canvasLocation" x="618" y="1804"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mvV-2Z-bYz">
@@ -634,6 +747,7 @@
         <image name="gift.png" width="100" height="100"/>
         <image name="maintenance.png" width="96" height="96"/>
         <image name="piping.png" width="96" height="96"/>
+        <image name="share.png" width="96" height="96"/>
         <image name="shop.png" width="100" height="100"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
