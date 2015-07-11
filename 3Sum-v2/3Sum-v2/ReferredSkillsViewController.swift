@@ -57,7 +57,41 @@ class ReferredSkillsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func SendPushForReferredBiz() {
+        // Create our Installation query
+        let pushQuery = PFInstallation.query()
+        pushQuery!.whereKey("user", equalTo: self.refData.referredBizPhone)
+        pushQuery!.whereKey("channels", equalTo: "referrals")
+        
+        // Send push notification to query
+        let push = PFPush()
+        push.setQuery(pushQuery) // Set our Installation query
+        push.setMessage("\(self.refData.referrerPhone) just referred you for \(self.refData.referredBizSkills) to \(self.refData.referreePhone)")
+        push.sendPushInBackgroundWithBlock { (result, error) -> Void in
+            println("sent push to \(self.refData.referredBizPhone): \(error)")
+        }
+    }
 
+
+    func SendPushForReferral() {
+        // Create our Installation query
+        let pushQuery = PFInstallation.query()
+        pushQuery!.whereKey("user", equalTo: self.refData.referreePhone)
+        pushQuery!.whereKey("channels", equalTo: "referrals")
+        
+        // Send push notification to query
+        let push = PFPush()
+        push.setQuery(pushQuery) // Set our Installation query
+        if (self.refData.referredBizName != "") {
+            push.setMessage("\(self.refData.referrerPhone) sent you reference to \(self.refData.referredBizName) for \(self.refData.referredBizSkills)")
+        } else {
+            push.setMessage("\(self.refData.referrerPhone) sent you reference to \(self.refData.referredBizPhone) for \(self.refData.referredBizSkills)")
+        }
+        push.sendPushInBackgroundWithBlock { (result, error) -> Void in
+            println("sent push to \(self.refData.referreePhone): \(error)")
+        }
+    }
+    
     @IBAction func sendAction(sender: AnyObject) {
    //     self.refData.referrerPhone = PFUser.currentUser()?.username!
         println(" referred biz phone: \(self.refData.referredBizPhone)")
@@ -71,28 +105,64 @@ class ReferredSkillsViewController: UIViewController {
         } else {	
             self.actInd.startAnimating()
             
-            self.object["ReferrerPhone"] = PFUser.currentUser()?.username!
+            self.refData.referrerPhone = PFUser.currentUser()!.username!
+            self.refData.referredBizSkills = skillField.text
+            self.object["ReferrerPhone"] = self.refData.referrerPhone
             self.object["ReferreePhone"] = self.refData.referreePhone
             self.object["RefereeEmail"] = self.refData.referreeEmail
             self.object["ReferredBizPhone"] = self.refData.referredBizPhone
             self.object["ReferredBizEmail"] = self.refData.referredBizEmail
             self.object["ReferredBizName"] = self.refData.referredBizName
-            self.object["ReferredBizSkills"] = skillField.text
+            self.object["ReferredBizSkills"] = self.refData.referredBizSkills
             
         
             self.object.saveInBackgroundWithBlock({ (success, error) -> Void in
                 if (success) {
                     println("data saved")
+                    self.SendPushForReferral()
+                    self.SendPushForReferredBiz()
                 } else {
                     println(error)
                 }
                 
             })
+
             self.navigationController?.popToRootViewControllerAnimated(true)
             
         }
         
     }
+    
+    @IBAction func handymanAction(sender: AnyObject) {
+        skillField.text = "Handyman"
+    }
+
+    @IBAction func cleaningAction(sender: AnyObject) {
+        skillField.text = "Cleaning"
+    }
+    @IBAction func plumbingAction(sender: AnyObject) {
+        skillField.text = "Plumbing"
+    }
+    @IBAction func electricalsAction(sender: AnyObject) {
+        skillField.text = "Electricals"
+    }
+    @IBAction func movingAction(sender: AnyObject) {
+        skillField.text = "Moving"
+    }
+    @IBAction func paintingAction(sender: AnyObject) {
+        skillField.text = "Painting"
+    }
+    @IBAction func realEstateAction(sender: AnyObject) {
+        skillField.text = "Real-Estate"
+    }
+    @IBAction func accountantAction(sender: AnyObject) {
+        skillField.text = "Accountant"
+    }
+
+    @IBAction func dentistAction(sender: AnyObject) {
+        skillField.text = "Dentist"
+    }
+    
     
     
     /*

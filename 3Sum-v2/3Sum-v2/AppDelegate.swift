@@ -23,8 +23,65 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId("x4HCE9yXS6UzKG5CZb9fXeY7r9c6rPcB3bJsZGws",
             clientKey: "I3pbYNOtXRt4KwqLR9BmYtaPeof71DJpti65noaD")
         
+        // Register for Push Notitications, if running iOS 8
+        if application.respondsToSelector("registerUserNotificationSettings:") {
+            
+            let types:UIUserNotificationType = (.Alert | .Badge | .Sound)
+            let settings:UIUserNotificationSettings = UIUserNotificationSettings(forTypes: types, categories: nil)
+            
+            application.registerUserNotificationSettings(settings)
+            application.registerForRemoteNotifications()
+            
+        }
+  /*      else {
+            // Register for Push Notifications before iOS 8
+            application.registerForRemoteNotificationTypes(.Alert | .Badge | .Sound)
+        }
+   */     
         return true
     }
+    
+    func application(application: UIApplication,didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        println("successfully registered for PN: \(deviceToken)")
+        PFPush.storeDeviceToken(deviceToken)
+        
+        let currentInstallation = PFInstallation.currentInstallation()
+        
+        // broadcast channel
+        currentInstallation.addUniqueObject("", forKey: "channels")
+        // referral channel
+        currentInstallation.addUniqueObject("referrals", forKey: "channels")
+ 
+        if (PFUser.currentUser()?.username != nil) {
+            currentInstallation["user"] = PFUser.currentUser()?.username
+        }
+        
+        currentInstallation.saveInBackgroundWithBlock {
+            (success, error) -> Void in
+            if success {
+                NSLog("registered channels for user: \(PFUser.currentUser()?.username)")
+            } else {
+                NSLog("%@", error!)
+            }
+        }
+        
+        //PFPush.subscribeToChannelInBackground("", block: { (result , error) -> Void in
+        //    println("subscirbed to channel: \(error)")
+        //})
+    }
+    
+    //Called if unable to register for APNS.
+    func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
+        
+        println("failed to register for PN")
+        println(error)
+        
+    }
+    
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+        PFPush.handlePush(userInfo)
+    }
+    
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

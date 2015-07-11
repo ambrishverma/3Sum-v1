@@ -33,7 +33,7 @@ class CustomLoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
     // MARK: - Navigation
 
@@ -44,6 +44,7 @@ class CustomLoginViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
+    
     
 
     @IBAction func loginAction(sender: AnyObject) {
@@ -64,6 +65,7 @@ class CustomLoginViewController: UIViewController {
                 if ((user) != nil) {
                     var alert = UIAlertView(title: "Success", message: "Logged in", delegate: self, cancelButtonTitle: "OK")
                     println("user logged in")
+                    self.updateUserRegistration()
                     //alert.show()
                 } else {
                     var alert = UIAlertView(title: "failed", message: "\(error)", delegate: self, cancelButtonTitle: "OK")
@@ -71,6 +73,8 @@ class CustomLoginViewController: UIViewController {
                 }
                 
             })
+            
+            updateUserRegistration()
             self.navigationController?.popToRootViewControllerAnimated(true)
         }
      
@@ -87,5 +91,27 @@ class CustomLoginViewController: UIViewController {
     @IBAction func forgotPasswordAction(sender: AnyObject) {
         println("forgot password")
     }
+    
+    
+    func updateUserRegistration() {
+        let currentInstallation = PFInstallation.currentInstallation()
+        
+        NSLog("registering installation for user: \(PFUser.currentUser()?.username)")
+       
+        if (PFUser.currentUser()?.username != nil) {
+            currentInstallation["user"] = PFUser.currentUser()?.username
+        }
+        
+        currentInstallation.saveInBackgroundWithBlock {
+            (success, error) -> Void in
+            if success {
+                NSLog("registered channels for user: \(PFUser.currentUser()?.username)")
+            } else {
+                NSLog("%@", error!)
+            }
+            
+        }
+    }
+
     
 }
