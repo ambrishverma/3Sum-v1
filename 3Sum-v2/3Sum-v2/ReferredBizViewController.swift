@@ -33,12 +33,12 @@ class ReferredBizViewController: UIViewController {
 
     
     @IBAction func nextAction(sender: AnyObject) {
-        if (referredBizNameField.text!.utf16.count < 2 ||
-            (referredPhoneNumberField.text!.utf16.count > 0 && (referredPhoneNumberField.text!.utf16.count < 10  || !referredPhoneNumberField.text!.isPhone)) ||
-            (referredEmailField.text!.utf16.count > 0 && (referredEmailField.text!.utf16.count < 5 || !referredEmailField.text!.isEmail))
+        if (count(referredBizNameField.text.utf16) < 2 ||
+            (count(referredPhoneNumberField.text.utf16) > 0 && (count(referredPhoneNumberField.text.utf16) < 10  || !referredPhoneNumberField.text.isPhone)) ||
+            (count(referredEmailField.text.utf16) > 0 && (count(referredEmailField.text.utf16) < 5 || !referredEmailField.text.isEmail))
          )
         {
-            let alert = UIAlertView(title: "Invalid", message: "Provide business/person name and a valid phone number/email address you are referring", delegate: self, cancelButtonTitle: "OK")
+            var alert = UIAlertView(title: "Invalid", message: "Provide business/person name and a valid phone number/email address you are referring", delegate: self, cancelButtonTitle: "OK")
             alert.show()
         } else {
             self.performSegueWithIdentifier("referredSkills", sender: self)
@@ -51,14 +51,14 @@ class ReferredBizViewController: UIViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let referredSkillsVc: ReferredSkillsViewController = segue.destinationViewController as! ReferredSkillsViewController
+        var referredSkillsVc: ReferredSkillsViewController = segue.destinationViewController as! ReferredSkillsViewController
 
         referredSkillsVc.refData.referreePhone = sendToPhoneNumber
         referredSkillsVc.refData.referreeEmail = sendToEmail
         
-        referredSkillsVc.refData.referredBizPhone = referredPhoneNumberField.text!
-        referredSkillsVc.refData.referredBizEmail = referredEmailField.text!
-        referredSkillsVc.refData.referredBizName = referredBizNameField.text!
+        referredSkillsVc.refData.referredBizPhone = referredPhoneNumberField.text
+        referredSkillsVc.refData.referredBizEmail = referredEmailField.text
+        referredSkillsVc.refData.referredBizName = referredBizNameField.text
     }
 
 

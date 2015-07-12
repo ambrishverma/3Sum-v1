@@ -51,20 +51,20 @@ class CustomLoginViewController: UIViewController {
         var username = self.usernameField.text
         var password = self.passwordField.text
         
-        if ((username!.utf16.count > 0 && (username!.utf16.count < 10  || !username!.isPhone)) ||
-        password!.utf16.count < 5)
+        if ((count(username.utf16) > 0 && (count(username.utf16) < 10  || !username.isPhone)) ||
+        count(password.utf16) < 5)
         {
             var alert = UIAlertView(title: "Invalid", message: "Username must be valid phone number and Password must be longer than 5 characters", delegate: self, cancelButtonTitle: "OK")
             alert.show()
         } else {
             self.actInd.startAnimating()
-            PFUser.logInWithUsernameInBackground(username!, password: password!, block: { (user, error) -> Void in
+            PFUser.logInWithUsernameInBackground(username, password: password, block: { (user, error) -> Void in
                 
                 self.actInd.stopAnimating()
                 
                 if ((user) != nil) {
                     var alert = UIAlertView(title: "Success", message: "Logged in", delegate: self, cancelButtonTitle: "OK")
-                    print("user logged in")
+                    println("user logged in")
                     self.updateUserRegistration()
                     //alert.show()
                 } else {
@@ -83,13 +83,13 @@ class CustomLoginViewController: UIViewController {
     
     @IBAction func signUpAction(sender: AnyObject) {
        
-        print("signup action")
+        println("signup action")
         self.performSegueWithIdentifier("signup", sender: self)
        
     }
     
     @IBAction func forgotPasswordAction(sender: AnyObject) {
-        print("forgot password")
+        println("forgot password")
     }
     
     

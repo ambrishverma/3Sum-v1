@@ -67,7 +67,7 @@ class ManageViewController: UIViewController {
     
     
     @IBAction func addServices(sender: AnyObject) {
-        print("adding services")
+        println("adding services")
         
         var phoneNumber = self.bizPhoneNumber.text
         var name = self.bizName.text
@@ -75,8 +75,8 @@ class ManageViewController: UIViewController {
         var address = self.bizAddress.text
         var services = self.bizServices.text
         
-        if (phoneNumber!.utf16.count < 10 || name!.utf16.count < 3 || services!.utf16.count < 4) {
-            let alert = UIAlertView(title: "Invalid", message: "Provide proper phone number, name and services for your businesses", delegate: self, cancelButtonTitle: "OK")
+        if (count(phoneNumber.utf16) < 10 || count(name.utf16) < 3 || count(services.utf16) < 4) {
+            var alert = UIAlertView(title: "Invalid", message: "Provide proper phone number, name and services for your businesses", delegate: self, cancelButtonTitle: "OK")
             alert.show()
         } else {
             self.actInd.startAnimating()
@@ -84,15 +84,15 @@ class ManageViewController: UIViewController {
             self.object["bizPhone"] = phoneNumber
             self.object["bizName"] = name
             self.object["bizAddres"] = address
-            let serviceArray = NSMutableArray()
-            serviceArray.addObject((services! as String))
+            var serviceArray = NSMutableArray()
+            serviceArray.addObject(services as String)
             self.object["services"] = serviceArray
             
             self.object.saveInBackgroundWithBlock({ (success, error) -> Void in
                 if (success) {
-                    print("data saved")
+                    println("data saved")
                 } else {
-                    print(error)
+                    println(error)
                 }
                 
             })

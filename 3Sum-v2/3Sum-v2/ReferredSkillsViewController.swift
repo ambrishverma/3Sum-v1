@@ -68,7 +68,7 @@ class ReferredSkillsViewController: UIViewController {
         push.setQuery(pushQuery) // Set our Installation query
         push.setMessage("\(self.refData.referrerPhone) just referred you for \(self.refData.referredBizSkills) to \(self.refData.referreePhone)")
         push.sendPushInBackgroundWithBlock { (result, error) -> Void in
-            print("sent push to \(self.refData.referredBizPhone): \(error)")
+            println("sent push to \(self.refData.referredBizPhone): \(error)")
         }
     }
 
@@ -88,25 +88,25 @@ class ReferredSkillsViewController: UIViewController {
             push.setMessage("\(self.refData.referrerPhone) sent you reference to \(self.refData.referredBizPhone) for \(self.refData.referredBizSkills)")
         }
         push.sendPushInBackgroundWithBlock { (result, error) -> Void in
-            print("sent push to \(self.refData.referreePhone): \(error)")
+            println("sent push to \(self.refData.referreePhone): \(error)")
         }
     }
     
     @IBAction func sendAction(sender: AnyObject) {
    //     self.refData.referrerPhone = PFUser.currentUser()?.username!
-        print(" referred biz phone: \(self.refData.referredBizPhone)")
-        print("sending referral")
+        println(" referred biz phone: \(self.refData.referredBizPhone)")
+        println("sending referral")
         
         
-        if (skillField.text!.utf16.count < 2) {
-            let alert = UIAlertView(title: "Invalid", message: "Sending generic reference, else please select/type appropriate skills", delegate: self, cancelButtonTitle: "OK")
+        if (count(skillField.text.utf16) < 2) {
+            var alert = UIAlertView(title: "Invalid", message: "Sending generic reference, else please select/type appropriate skills", delegate: self, cancelButtonTitle: "OK")
             skillField.text = "General"
             alert.show()
         } else {	
             self.actInd.startAnimating()
             
             self.refData.referrerPhone = PFUser.currentUser()!.username!
-            self.refData.referredBizSkills = skillField.text!
+            self.refData.referredBizSkills = skillField.text
             self.object["ReferrerPhone"] = self.refData.referrerPhone
             self.object["ReferreePhone"] = self.refData.referreePhone
             self.object["RefereeEmail"] = self.refData.referreeEmail
@@ -118,11 +118,11 @@ class ReferredSkillsViewController: UIViewController {
         
             self.object.saveInBackgroundWithBlock({ (success, error) -> Void in
                 if (success) {
-                    print("data saved")
+                    println("data saved")
                     self.SendPushForReferral()
                     self.SendPushForReferredBiz()
                 } else {
-                    print(error)
+                    println(error)
                 }
                 
             })
