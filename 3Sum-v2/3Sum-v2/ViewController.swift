@@ -36,9 +36,9 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         if (PFUser.currentUser() == nil) {
             self.loginSignUpButton.hidden = false;
             self.logoutButton.hidden = true;
-            self.loginViewController.fields = PFLogInFields.UsernameAndPassword | PFLogInFields.LogInButton | PFLogInFields.SignUpButton | PFLogInFields.PasswordForgotten | PFLogInFields.DismissButton
+            self.loginViewController.fields = [PFLogInFields.UsernameAndPassword, PFLogInFields.LogInButton, PFLogInFields.SignUpButton, PFLogInFields.PasswordForgotten, PFLogInFields.DismissButton]
             
-            var loginLogoTitle = UILabel()
+            let loginLogoTitle = UILabel()
             loginLogoTitle.text = "3-Sum Login"
             self.loginViewController.logInView!.logo = loginLogoTitle
             
@@ -52,7 +52,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             
             self.loginViewController.delegate = self
             
-            var signUpLogoTitle = UILabel()
+            let signUpLogoTitle = UILabel()
             signUpLogoTitle.text = "3-Sum Sign Up"
             self.signUpViewController.signUpView!.logo = signUpLogoTitle
             self.signUpViewController.signUpView!.addSubview(imageView)
@@ -63,7 +63,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             self.loginViewController.signUpController = self.signUpViewController
             
         } else {
-            println("user already logged in")
+            print("user already logged in")
             self.loginSignUpButton.hidden = true;
             self.logoutButton.hidden = false;
         }
@@ -84,13 +84,13 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     
     func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser) {
         
-        println("user logged in")
+        print("user logged in")
         self.dismissViewControllerAnimated(true, completion: nil)
         
     }
     
     func logInViewController(logInController: PFLogInViewController, didFailToLogInWithError error: NSError?) {
-        println("failed to login")
+        print("failed to login")
     }
     
     
@@ -101,11 +101,11 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     }
     
     func signUpViewController(signUpController: PFSignUpViewController, didFailToSignUpWithError error: NSError?) {
-        println("failed to signup")
+        print("failed to signup")
     }
     
     func signUpViewControllerDidCancelSignUp(signUpController: PFSignUpViewController) {
-        println("user dismissed sign up")
+        print("user dismissed sign up")
         
     }
     
@@ -124,17 +124,17 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     }
     
     @IBAction func referAction(sender: AnyObject) {
-        println("refer action")
+        print("refer action")
         self.performSegueWithIdentifier("referTo", sender: self)
     }
     
     @IBAction func redeemAction(sender: AnyObject) {
-        println("redeem action")
+        print("redeem action")
         self.performSegueWithIdentifier("redeem", sender: self)
     }
     
     @IBAction func manageAction(sender: AnyObject) {
-        println("manage services")
+        print("manage services")
         self.performSegueWithIdentifier("manage", sender: self)
     }
     

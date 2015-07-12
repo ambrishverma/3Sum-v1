@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "DD52E70E73D6D6762B8D4FF36B77D4EEF9D7C038",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "59B001750F41A6AFF9AF7CFCB7E0DC8E6E812CD4" : 0,
+    "DD52E70E73D6D6762B8D4FF36B77D4EEF9D7C038" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C4E41EF6-737F-474B-97C8-D96FBA542BE1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "59B001750F41A6AFF9AF7CFCB7E0DC8E6E812CD4" : "",
+    "DD52E70E73D6D6762B8D4FF36B77D4EEF9D7C038" : "3Sum-v1"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "3Sum-v2",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 203,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "3Sum-v2\/3Sum-v2.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ambrishverma\/iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "59B001750F41A6AFF9AF7CFCB7E0DC8E6E812CD4"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ambrishverma\/3Sum-v1.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DD52E70E73D6D6762B8D4FF36B77D4EEF9D7C038"
+    }
+  ]
+}

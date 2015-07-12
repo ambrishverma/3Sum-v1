@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Register for Push Notitications, if running iOS 8
         if application.respondsToSelector("registerUserNotificationSettings:") {
             
-            let types:UIUserNotificationType = (.Alert | .Badge | .Sound)
+            let types:UIUserNotificationType = ([.Alert, .Badge, .Sound])
             let settings:UIUserNotificationSettings = UIUserNotificationSettings(forTypes: types, categories: nil)
             
             application.registerUserNotificationSettings(settings)
@@ -42,7 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication,didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
-        println("successfully registered for PN: \(deviceToken)")
+        print("successfully registered for PN: \(deviceToken)")
         PFPush.storeDeviceToken(deviceToken)
         
         let currentInstallation = PFInstallation.currentInstallation()
@@ -73,8 +73,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //Called if unable to register for APNS.
     func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
         
-        println("failed to register for PN")
-        println(error)
+        print("failed to register for PN")
+        print(error)
         
     }
     

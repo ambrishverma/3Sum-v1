@@ -55,15 +55,15 @@ class CustomSignUpViewController: UIViewController {
         var email = self.emailField.text
     
         // user must provide a valid phone or a valid email address
-        if ((count(username.utf16) < 10  || !username.isPhone) ||
-            (count(email.utf16) > 0 && (count(email.utf16) < 5 || !email.isEmail)) ||
-             count(password.utf16) < 5)
+        if ((username!.utf16.count < 10  || !username!.isPhone) ||
+            (email!.utf16.count > 0 && (email!.utf16.count < 5 || !email!.isEmail)) ||
+             password!.utf16.count < 5)
         {
-            var alert = UIAlertView(title: "Invalid", message: "Username must be valid phone number and Password must be longer than 5 characters", delegate: self, cancelButtonTitle: "OK")
+            let alert = UIAlertView(title: "Invalid", message: "Username must be valid phone number and Password must be longer than 5 characters", delegate: self, cancelButtonTitle: "OK")
             alert.show()
         } else {
             self.actInd.startAnimating()
-            var newUser = PFUser()
+            let newUser = PFUser()
             newUser.username = username
             newUser.password = password
             newUser.email = email
@@ -72,12 +72,12 @@ class CustomSignUpViewController: UIViewController {
                 self.actInd.stopAnimating()
                 
                 if ((error) != nil) {
-                    var alert = UIAlertView(title: "Error", message: "\(error)", delegate: self, cancelButtonTitle: "OK")
+                    let alert = UIAlertView(title: "Error", message: "\(error)", delegate: self, cancelButtonTitle: "OK")
                     alert.show()
                 } else {
                     var alert = UIAlertView(title: "Success", message: "Signed Up", delegate: self, cancelButtonTitle: "OK")
                     // alert.show()
-                    println("user signed up")
+                    print("user signed up")
                 }
                 
             })

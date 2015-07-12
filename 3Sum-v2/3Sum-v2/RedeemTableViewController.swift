@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class RedeemTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
+class RedeemTableViewController: UITableViewController {
 
     var referralObjects: NSMutableArray! = NSMutableArray()
 
@@ -22,10 +22,10 @@ class RedeemTableViewController: UITableViewController, UITableViewDataSource, U
         self.tableView.estimatedRowHeight = 200.0
         
         // load offers
-        println("loading offers")
+        print("loading offers")
         self.fetchAllObjectsFromLocalDataStore()
         self.fetchAllObjects()
-        println("reloading data")
+        print("reloading data")
         self.tableView.reloadData()
     }
 
@@ -48,7 +48,7 @@ class RedeemTableViewController: UITableViewController, UITableViewDataSource, U
         //self.tableView.rowHeight = UITableViewAutomaticDimension;
         //self.tableView.estimatedRowHeight = 200.0
       
-        println("needed cells: \(self.referralObjects.count)")
+        print("needed cells: \(self.referralObjects.count)")
         return self.referralObjects.count
         //return 5
     }
@@ -57,11 +57,11 @@ class RedeemTableViewController: UITableViewController, UITableViewDataSource, U
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("offerCell", forIndexPath: indexPath) as! OfferViewCell
         
-        println("creating cell # \(indexPath.row)")
+        print("creating cell # \(indexPath.row)")
         cell.clearCell()
         
         // Configure the cell...
-        var object: PFObject = self.referralObjects.objectAtIndex(indexPath.row) as! PFObject
+        let object: PFObject = self.referralObjects.objectAtIndex(indexPath.row) as! PFObject
         
         cell.nameLabel.text = object["ReferredBizName"] as? String
         let referredByStr = object["ReferrerPhone"] as! String
@@ -100,34 +100,34 @@ class RedeemTableViewController: UITableViewController, UITableViewDataSource, U
     
     func fetchAllObjectsFromLocalDataStore() {
         
-        var query = PFQuery(className: "Referrals")
+        let query = PFQuery(className: "Referrals")
         query.fromLocalDatastore()
-        println("loading local objects")
-        println("username: \(PFUser.currentUser()!.username!)")
+        print("loading local objects")
+        print("username: \(PFUser.currentUser()!.username!)")
         query.whereKey("ReferreePhone", equalTo: PFUser.currentUser()!.username!)
         query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
             if (error == nil) {
-                var temp: NSArray = (objects as NSArray?)!
+                let temp: NSArray = (objects as NSArray?)!
                 self.referralObjects = temp.mutableCopy() as! NSMutableArray
-                println("fetch locl objects: \(self.referralObjects.count)")
+                print("fetch locl objects: \(self.referralObjects.count)")
                 self.tableView.reloadData()
             } else {
-                println(error?.userInfo)
+                print(error?.userInfo)
             }
         }
     }
     
     func fetchAllObjects() {
         PFObject.unpinAllObjectsInBackgroundWithBlock(nil)
-        println("fetching all objects")
-        var query = PFQuery(className: "Referrals")
+        print("fetching all objects")
+        let query = PFQuery(className: "Referrals")
         query.whereKey("ReferreePhone", equalTo: PFUser.currentUser()!.username! )
         query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
             if (error == nil) {
                 PFObject.pinAll(objects)
                 self.fetchAllObjectsFromLocalDataStore()
             } else {
-                println(error?.userInfo)
+                print(error?.userInfo)
             }
         }
     }
