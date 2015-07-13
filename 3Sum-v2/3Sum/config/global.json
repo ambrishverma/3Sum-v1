@@ -1,0 +1,14 @@
+{
+  "global": {
+    "parseVersion": "1.4.2"
+  },
+  "applications": {
+    "3Sum": {
+      "applicationId": "x4HCE9yXS6UzKG5CZb9fXeY7r9c6rPcB3bJsZGws",
+      "masterKey": "t7b3J65SZqk9ts5RCNjkOELqaC7CaVB9yxOQxXVK"
+    },
+    "_default": {
+      "link": "3Sum"
+    }
+  }
+}

@@ -57,7 +57,30 @@ class ReferredSkillsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func SendPushForReferredBiz() {
+    func showAlert(title: String, message: String) {
+        return UIAlertView(title: title, message: message, delegate: nil, cancelButtonTitle: NSLocalizedString("alertOK", comment: "OK")).show()
+    }
+    
+    func sendMsgForReferral(phoneNumber: String, messageString: String)  {
+        self.editing = false
+        let params = ["phoneNumber" : phoneNumber, "message" : messageString ]
+        PFCloud.callFunctionInBackground("sendMessage", withParameters: params) {
+            (response: AnyObject?, error: NSError?) -> Void in
+            self.editing = true
+            if let error = error {
+                var description = error.description
+                if count(description) == 0 {
+                    description = NSLocalizedString("warningGeneral", comment: "Something went wrong.  Please try again.") // "There was a problem with the service.\nTry again later."
+                } else if let message = error.userInfo?["error"] as? String {
+                    description = message
+                }
+ //               self.showAlert("Login Error", message: description)
+            }
+        }
+    }
+
+    
+    func SendPushToReferredBiz() {
         // Create our Installation query
         let pushQuery = PFInstallation.query()
         pushQuery!.whereKey("user", equalTo: self.refData.referredBizPhone)
@@ -66,14 +89,16 @@ class ReferredSkillsViewController: UIViewController {
         // Send push notification to query
         let push = PFPush()
         push.setQuery(pushQuery) // Set our Installation query
-        push.setMessage("\(self.refData.referrerPhone) just referred you for \(self.refData.referredBizSkills) to \(self.refData.referreePhone)")
+        let messageTxt = " \(self.refData.referrerPhone) just referred you for \(self.refData.referredBizSkills) skill to \(self.refData.referreePhone)."
+        push.setMessage(messageTxt)
         push.sendPushInBackgroundWithBlock { (result, error) -> Void in
             println("sent push to \(self.refData.referredBizPhone): \(error)")
         }
+        sendMsgForReferral(self.refData.referredBizPhone, messageString: messageTxt)
     }
 
 
-    func SendPushForReferral() {
+    func SendPushToReferree() {
         // Create our Installation query
         let pushQuery = PFInstallation.query()
         pushQuery!.whereKey("user", equalTo: self.refData.referreePhone)
@@ -82,14 +107,17 @@ class ReferredSkillsViewController: UIViewController {
         // Send push notification to query
         let push = PFPush()
         push.setQuery(pushQuery) // Set our Installation query
+        var messageTxt = ""
         if (self.refData.referredBizName != "") {
-            push.setMessage("\(self.refData.referrerPhone) sent you reference to \(self.refData.referredBizName) for \(self.refData.referredBizSkills)")
+            messageTxt = " \(self.refData.referrerPhone) sent you reference to \(self.refData.referredBizName) for \(self.refData.referredBizSkills) skill."
         } else {
-            push.setMessage("\(self.refData.referrerPhone) sent you reference to \(self.refData.referredBizPhone) for \(self.refData.referredBizSkills)")
+            messageTxt = " \(self.refData.referrerPhone) sent you reference to \(self.refData.referredBizPhone) for \(self.refData.referredBizSkills) skill."
         }
+        push.setMessage(messageTxt)
         push.sendPushInBackgroundWithBlock { (result, error) -> Void in
             println("sent push to \(self.refData.referreePhone): \(error)")
         }
+        sendMsgForReferral(self.refData.referredBizPhone, messageString: messageTxt)
     }
     
     @IBAction func sendAction(sender: AnyObject) {
@@ -119,8 +147,8 @@ class ReferredSkillsViewController: UIViewController {
             self.object.saveInBackgroundWithBlock({ (success, error) -> Void in
                 if (success) {
                     println("data saved")
-                    self.SendPushForReferral()
-                    self.SendPushForReferredBiz()
+                    self.SendPushToReferree()
+                    self.SendPushToReferredBiz()
                 } else {
                     println(error)
                 }

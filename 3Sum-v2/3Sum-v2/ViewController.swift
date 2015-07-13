@@ -19,6 +19,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     
     var loginViewController: PFLogInViewController = PFLogInViewController()
     var signUpViewController: PFSignUpViewController = PFSignUpViewController()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,13 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+
+        let currentUser = PFUser.currentUser()
+        if currentUser == nil {
+            self.performSegueWithIdentifier("login", sender: self)
+        }
+
+        
         self.mainLogoImageView.image = UIImage(named: "3-sum")
         if (PFUser.currentUser() == nil) {
             self.loginSignUpButton.hidden = false;
