@@ -147,6 +147,9 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     }
     
     
+    @IBAction func askAction(sender: AnyObject) {
+        println("Ask someone")
+    }
     
 }
 

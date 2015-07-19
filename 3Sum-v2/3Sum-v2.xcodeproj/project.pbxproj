@@ -51,6 +51,11 @@
 		6862D9D31B4B564100745516 /* chat.png in Resources */ = {isa = PBXBuildFile; fileRef = 6862D9D21B4B564100745516 /* chat.png */; };
 		6862D9D51B4B56E200745516 /* shop.png in Resources */ = {isa = PBXBuildFile; fileRef = 6862D9D41B4B56E200745516 /* shop.png */; };
 		6862D9D71B4B68BF00745516 /* ManageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6862D9D61B4B68BF00745516 /* ManageViewController.swift */; };
+		687814E01B59BCCD000EC323 /* approve.png in Resources */ = {isa = PBXBuildFile; fileRef = 687814DE1B59BCCD000EC323 /* approve.png */; };
+		687814E11B59BCCD000EC323 /* decision.png in Resources */ = {isa = PBXBuildFile; fileRef = 687814DF1B59BCCD000EC323 /* decision.png */; };
+		687814E51B5C0989000EC323 /* butting_in.png in Resources */ = {isa = PBXBuildFile; fileRef = 687814E21B5C0989000EC323 /* butting_in.png */; };
+		687814E61B5C0989000EC323 /* currency_exchange.png in Resources */ = {isa = PBXBuildFile; fileRef = 687814E31B5C0989000EC323 /* currency_exchange.png */; };
+		687814E71B5C0989000EC323 /* paid.png in Resources */ = {isa = PBXBuildFile; fileRef = 687814E41B5C0989000EC323 /* paid.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +117,11 @@
 		6862D9D21B4B564100745516 /* chat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chat.png; path = Images.xcassets/chat.png; sourceTree = "<group>"; };
 		6862D9D41B4B56E200745516 /* shop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shop.png; path = Images.xcassets/shop.png; sourceTree = "<group>"; };
 		6862D9D61B4B68BF00745516 /* ManageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManageViewController.swift; sourceTree = "<group>"; };
+		687814DE1B59BCCD000EC323 /* approve.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = approve.png; path = Images.xcassets/approve.png; sourceTree = "<group>"; };
+		687814DF1B59BCCD000EC323 /* decision.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = decision.png; path = Images.xcassets/decision.png; sourceTree = "<group>"; };
+		687814E21B5C0989000EC323 /* butting_in.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = butting_in.png; path = Images.xcassets/butting_in.png; sourceTree = "<group>"; };
+		687814E31B5C0989000EC323 /* currency_exchange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = currency_exchange.png; path = Images.xcassets/currency_exchange.png; sourceTree = "<group>"; };
+		687814E41B5C0989000EC323 /* paid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = paid.png; path = Images.xcassets/paid.png; sourceTree = "<group>"; };
 		BB66FE1CFFD3A18DFB5328E8 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CB9855E4995C73299A8AC935 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -262,6 +272,11 @@
 		6862D9D81B4B68F700745516 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				687814E21B5C0989000EC323 /* butting_in.png */,
+				687814E31B5C0989000EC323 /* currency_exchange.png */,
+				687814E41B5C0989000EC323 /* paid.png */,
+				687814DE1B59BCCD000EC323 /* approve.png */,
+				687814DF1B59BCCD000EC323 /* decision.png */,
 				681FF9FD1B5793BB0061C6AE /* 3-Sum-logo.png */,
 				6851024F1B4F32700002ED4B /* share.png */,
 				685102451B4E079B0002ED4B /* maintenance.png */,
@@ -369,15 +384,20 @@
 				6862D9CB1B4A85AA00745516 /* manage.jpg in Resources */,
 				685102441B4E06F50002ED4B /* broom.png in Resources */,
 				681FF9FE1B5793BB0061C6AE /* 3-Sum-logo.png in Resources */,
+				687814E71B5C0989000EC323 /* paid.png in Resources */,
+				687814E11B59BCCD000EC323 /* decision.png in Resources */,
 				6862D9D31B4B564100745516 /* chat.png in Resources */,
 				6862D94F1B4A09F500745516 /* Main.storyboard in Resources */,
 				6862D9D51B4B56E200745516 /* shop.png in Resources */,
+				687814E61B5C0989000EC323 /* currency_exchange.png in Resources */,
 				6862D9CF1B4B522200745516 /* refer-wire.jpg in Resources */,
+				687814E01B59BCCD000EC323 /* approve.png in Resources */,
 				685102421B4E05910002ED4B /* piping.png in Resources */,
 				6862D9541B4A09F500745516 /* LaunchScreen.xib in Resources */,
 				6862D9511B4A09F500745516 /* Images.xcassets in Resources */,
 				6862D9CD1B4B510900745516 /* refer-blue.jpg in Resources */,
 				685102461B4E079B0002ED4B /* maintenance.png in Resources */,
+				687814E51B5C0989000EC323 /* butting_in.png in Resources */,
 				6862D9C91B4A84E300745516 /* redeem.jpg in Resources */,
 				685102501B4F32700002ED4B /* share.png in Resources */,
 			);

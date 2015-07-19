@@ -69,7 +69,7 @@ class RedeemTableViewController: UITableViewController, UITableViewDataSource, U
         cell.phoneLabel.text = object["ReferredBizPhone"] as? String
         cell.emailLabel.text = object["ReferredBizEmail"] as? String
         cell.skillsLabel.text = object["ReferredBizSkills"] as? String
-        cell.thumbImageView.image = UIImage(named: "share")
+        cell.thumbImageView.image = UIImage(named: "butting_in")
 
 /*        cell.addressLabel.text = object["ReferredBizName"] as? String
         cell.offerDealLabel.text = object["ReferredBizName"] as? String
