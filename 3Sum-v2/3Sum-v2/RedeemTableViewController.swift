@@ -69,31 +69,7 @@ class RedeemTableViewController: UITableViewController, UITableViewDataSource, U
         cell.phoneLabel.text = object["ReferredBizPhone"] as? String
         cell.emailLabel.text = object["ReferredBizEmail"] as? String
         cell.skillsLabel.text = object["ReferredBizSkills"] as? String
-        cell.thumbImageView.image = UIImage(named: "butting_in")
-
-/*        cell.addressLabel.text = object["ReferredBizName"] as? String
-        cell.offerDealLabel.text = object["ReferredBizName"] as? String
-        cell.distanceLabel.text = object["ReferredBizName"] as? String
-
-        
-        
-        if (object.objectForKey("image") != nil) {
-            var imageFile: PFFile = object.objectForKey("image") as! PFFile
-            
-            if (imageFile.isDataAvailable) {
-                imageFile.getDataInBackgroundWithBlock({
-                    (imageData: NSData?, error: NSError?) -> Void in
-                    if (error == nil) {
-                        let image = UIImage(data:imageData!)
-                        cell.masterImageView.image = image
-                    } else {
-                        println(error?.userInfo)
-                    }
-                })
-            }
-        }
-*/
-        
+        cell.thumbImageView.image = UIImage(named: "butting_in")        
         return cell
     }
     
