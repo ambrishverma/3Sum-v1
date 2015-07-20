@@ -3,17 +3,17 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "3-Sum-logo-1.png"
+      "filename" : "Icon-Small.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "3-Sum-logo-2.png"
+      "filename" : "Icon-Small@2x.png"
     },
     {
       "idiom" : "universal",
       "scale" : "3x",
-      "filename" : "3-Sum-logo-3.png"
+      "filename" : "Icon-Small@3x.png"
     }
   ],
   "info" : {

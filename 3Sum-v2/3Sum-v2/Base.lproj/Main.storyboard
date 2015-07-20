@@ -1393,7 +1393,7 @@
         <scene sceneID="F87-qH-dS6">
             <objects>
                 <tableViewController storyboardIdentifier="redeemVC" title="Redeem Referrals" id="m0G-5d-aXB" customClass="RedeemTableViewController" customModule="_Sum_v2" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="103" sectionHeaderHeight="22" sectionFooterHeight="22" id="nkN-cd-kYK" userLabel="Referrals Avaialble To Redeem">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="103" sectionHeaderHeight="22" sectionFooterHeight="22" id="nkN-cd-kYK" userLabel="Referrals Avaialble To Redeem">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
