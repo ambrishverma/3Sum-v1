@@ -73,7 +73,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         } else {
             println("user already logged in")
             self.loginSignUpButton.hidden = true;
-            self.logoutButton.hidden = false;
+            self.logoutButton.hidden = true;  // fixme: need to fix logout clickable scenario
         }
     }
 
@@ -149,6 +149,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     
     @IBAction func askAction(sender: AnyObject) {
         println("Ask someone")
+        self.performSegueWithIdentifier("askReferral", sender: self)
     }
     
 }
