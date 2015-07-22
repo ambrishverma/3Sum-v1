@@ -34,6 +34,9 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
 
+       // self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background-image.jpg")!)
+       
+        
         let currentUser = PFUser.currentUser()
         if currentUser == nil {
             self.performSegueWithIdentifier("login", sender: self)

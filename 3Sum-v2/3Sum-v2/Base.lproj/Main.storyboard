@@ -1254,6 +1254,9 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" none="YES" image="YES"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstItem="R1L-GP-yKO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="40b-yR-loc"/>
                             <constraint firstItem="nH3-hb-naN" firstAttribute="top" secondItem="EyN-La-4yy" secondAttribute="bottom" constant="5" id="4UN-3F-WJ8"/>
