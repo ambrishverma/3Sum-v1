@@ -352,7 +352,7 @@
 				TargetAttributes = {
 					6862D9431B4A09F500745516 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = TV3L444A76;
+						DevelopmentTeam = 3V5GATNY8A;
 					};
 					6862D9581B4A09F500745516 = {
 						CreatedOnToolsVersion = 6.4;
@@ -541,8 +541,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ambrish Verma (XL875NMVBM)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ambrish Verma (XL875NMVBM)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ambrish Verma (TSMVZDFBTK)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ambrish Verma (TSMVZDFBTK)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -564,7 +564,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "a271b257-d02b-48d6-994b-027d461d4ffc";
+				PROVISIONING_PROFILE = "cfe0c077-a5c8-4639-ba1c-ef520fa08efb";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -587,8 +587,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ambrish Verma (XL875NMVBM)";
-				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: Ambrish Verma (XL875NMVBM)";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ambrish Verma (TSMVZDFBTK)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: Ambrish Verma (TSMVZDFBTK)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -603,7 +603,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "a271b257-d02b-48d6-994b-027d461d4ffc";
+				PROVISIONING_PROFILE = "cfe0c077-a5c8-4639-ba1c-ef520fa08efb";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -615,17 +615,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ambrish Verma (XL875NMVBM)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ambrish Verma (XL875NMVBM)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ambrish Verma (TSMVZDFBTK)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/ambrish/Downloads/parse-library-1.7.5",
 				);
 				INFOPLIST_FILE = "3Sum-v2/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a271b257-d02b-48d6-994b-027d461d4ffc";
+				PROVISIONING_PROFILE = "cfe0c077-a5c8-4639-ba1c-ef520fa08efb";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -636,17 +636,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Ambrish Verma (XL875NMVBM)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ambrish Verma (XL875NMVBM)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ambrish Verma (TSMVZDFBTK)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/ambrish/Downloads/parse-library-1.7.5",
 				);
 				INFOPLIST_FILE = "3Sum-v2/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a271b257-d02b-48d6-994b-027d461d4ffc";
+				PROVISIONING_PROFILE = "cfe0c077-a5c8-4639-ba1c-ef520fa08efb";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
