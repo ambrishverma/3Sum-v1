@@ -76,7 +76,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         } else {
             println("user already logged in")
             self.loginSignUpButton.hidden = true;
-            self.logoutButton.hidden = true;  // fixme: need to fix logout clickable scenario
+            self.logoutButton.hidden = false;
         }
     }
 
@@ -132,6 +132,8 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     @IBAction func logoutAction(sender: AnyObject) {
         PFUser.logOut()
         self.logoutButton.hidden = false;
+        self.dismissViewControllerAnimated(true, completion: nil)
+       // self.performSegueWithIdentifier("login", sender: self)
     }
     
     @IBAction func referAction(sender: AnyObject) {
