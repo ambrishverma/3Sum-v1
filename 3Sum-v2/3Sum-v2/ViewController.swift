@@ -133,7 +133,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         PFUser.logOut()
         self.logoutButton.hidden = false;
         self.dismissViewControllerAnimated(true, completion: nil)
-       // self.performSegueWithIdentifier("login", sender: self)
+//        self.performSegueWithIdentifier("login", sender: self)
     }
     
     @IBAction func referAction(sender: AnyObject) {
@@ -154,6 +154,9 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     
     @IBAction func askAction(sender: AnyObject) {
         println("Ask someone")
+      //  PFUser.logOut()
+      //  self.dismissViewControllerAnimated(true, completion: nil)
+        
         self.performSegueWithIdentifier("askReferral", sender: self)
     }
     

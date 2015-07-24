@@ -89,8 +89,13 @@ class CustomLoginViewController: UIViewController {
                         return self.step1()
                     }
                     self.updateUserRegistration()
-                    self.navigationController?.popToRootViewControllerAnimated(true)
-                    return self.dismissViewControllerAnimated(true, completion: nil)
+                    
+                    // capturing/validating additional user information
+                    println("Gathering User Info")
+                    self.performSegueWithIdentifier("signup", sender: self)
+                    
+                    //self.navigationController?.popToRootViewControllerAnimated(true)
+                    //return self.dismissViewControllerAnimated(true, completion: nil)
                 }
             } else {
                 self.editing = true
@@ -137,6 +142,10 @@ class CustomLoginViewController: UIViewController {
                 step1()
             } else {
                 phoneNumber = usernameField.text
+                //todo
+                //println("Gathering User Info")
+                //self.performSegueWithIdentifier("signup", sender: self)
+
                 sendLoginCode()
                 return self.step2()
             }

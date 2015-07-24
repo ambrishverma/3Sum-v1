@@ -99,11 +99,14 @@ class ManageViewController: UIViewController {
             self.navigationController?.popToRootViewControllerAnimated(true)
             
         }
-
-        
-        
         
     }
     
+    
+    
+    @IBAction func manageProfileAction(sender: AnyObject) {
+        println("manage profile")
+        self.performSegueWithIdentifier("manageProfile", sender: self)
+    }
 
 }
