@@ -34,6 +34,7 @@ class CustomSignUpViewController: UIViewController, UIImagePickerControllerDeleg
         self.actInd.center = self.view.center
         self.actInd.hidesWhenStopped = true
         self.actInd.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+        self.emailTextField.keyboardType = UIKeyboardType.EmailAddress
         view.addSubview(self.actInd)
         
         self.currentUser = PFUser.currentUser()

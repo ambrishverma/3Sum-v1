@@ -22,6 +22,9 @@ class ReferredBizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.referredPhoneNumberField.keyboardType = UIKeyboardType.PhonePad
+        self.referredEmailField.keyboardType = UIKeyboardType.EmailAddress
+        
         // Do any additional setup after loading the view.
     }
 

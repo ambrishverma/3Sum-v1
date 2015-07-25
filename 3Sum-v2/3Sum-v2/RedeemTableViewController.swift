@@ -64,12 +64,21 @@ class RedeemTableViewController: UITableViewController, UITableViewDataSource, U
         var object: PFObject = self.referralObjects.objectAtIndex(indexPath.row) as! PFObject
         
         cell.nameLabel.text = object["ReferredBizName"] as? String
-        let referredByStr = object["ReferrerPhone"] as! String
+        var referredByStr = object["ReferrerPhone"] as! String
+        var referrerName = object["ReferrerName"] as? String
+        if (referrerName == nil) {
+            println(" referrer name empty")
+        }else {
+            if (referrerName != "") {
+                referredByStr = referrerName!
+            }
+        }
+        
         cell.referrerPhoneLabel.text = "Referred By: \(referredByStr)"
         cell.phoneLabel.text = object["ReferredBizPhone"] as? String
         cell.emailLabel.text = object["ReferredBizEmail"] as? String
         cell.skillsLabel.text = object["ReferredBizSkills"] as? String
-        cell.thumbImageView.image = UIImage(named: "butting_in")        
+        cell.thumbImageView.image = UIImage(named: "butting_in")
         return cell
     }
     

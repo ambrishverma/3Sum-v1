@@ -11,7 +11,9 @@ import Parse
 
 class referralObject {
     var referrerPhone: String = ""
+    var referrerName: String = ""
     var referreePhone: String = ""
+    var referreeName: String = ""
     var referreeEmail: String = ""
     var referredBizPhone: String = ""
     var referredBizEmail: String = ""
@@ -89,7 +91,14 @@ class ReferredSkillsViewController: UIViewController {
         // Send push notification to query
         let push = PFPush()
         push.setQuery(pushQuery) // Set our Installation query
-        let messageTxt = " \(self.refData.referrerPhone) just referred you for \(self.refData.referredBizSkills) skill to \(self.refData.referreePhone)."
+        var messageTxt = ""
+        
+        if (self.refData.referreeName != "") {
+            messageTxt = " \(self.refData.referrerName) just referred you for \(self.refData.referredBizSkills) skill to \(self.refData.referreeName)."
+        }  else {
+            messageTxt = " \(self.refData.referrerName) just referred you for \(self.refData.referredBizSkills) skill to \(self.refData.referreePhone)."
+        }
+        
         push.setMessage(messageTxt)
         push.sendPushInBackgroundWithBlock { (result, error) -> Void in
             println("sent push to \(self.refData.referredBizPhone): \(error)")
@@ -109,7 +118,7 @@ class ReferredSkillsViewController: UIViewController {
         push.setQuery(pushQuery) // Set our Installation query
         var messageTxt = ""
         if (self.refData.referredBizName != "") {
-            messageTxt = " \(self.refData.referrerPhone) sent you reference to \(self.refData.referredBizName) for \(self.refData.referredBizSkills) skill."
+            messageTxt = " \(self.refData.referrerName) sent you reference to \(self.refData.referredBizName) for \(self.refData.referredBizSkills) skill."
         } else {
             messageTxt = " \(self.refData.referrerPhone) sent you reference to \(self.refData.referredBizPhone) for \(self.refData.referredBizSkills) skill."
         }
@@ -134,9 +143,12 @@ class ReferredSkillsViewController: UIViewController {
             self.actInd.startAnimating()
             
             self.refData.referrerPhone = PFUser.currentUser()!.username!
+            self.refData.referrerName = PFUser.currentUser()!.objectForKey("fullname") as! String
             self.refData.referredBizSkills = skillField.text
             self.object["ReferrerPhone"] = self.refData.referrerPhone
+            self.object["ReferrerName"] = self.refData.referrerName
             self.object["ReferreePhone"] = self.refData.referreePhone
+            self.object["ReferreeName"] = self.refData.referreeName
             self.object["RefereeEmail"] = self.refData.referreeEmail
             self.object["ReferredBizPhone"] = self.refData.referredBizPhone
             self.object["ReferredBizEmail"] = self.refData.referredBizEmail

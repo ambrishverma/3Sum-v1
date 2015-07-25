@@ -28,8 +28,10 @@ class CustomLoginViewController: UIViewController {
         self.actInd.hidesWhenStopped = true
         self.actInd.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
         view.addSubview(self.actInd)
+        self.usernameField.keyboardType = UIKeyboardType.PhonePad
         step1()
     
+        
         // Do any additional setup after loading the view.
     }
 

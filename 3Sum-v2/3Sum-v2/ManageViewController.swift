@@ -32,6 +32,8 @@ class ManageViewController: UIViewController {
         self.actInd.center = self.view.center
         self.actInd.hidesWhenStopped = true
         self.actInd.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+        self.bizPhoneNumber.keyboardType = UIKeyboardType.PhonePad
+        
         view.addSubview(self.actInd)
         
         if (self.object != nil) {

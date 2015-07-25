@@ -35,7 +35,9 @@ class ReferToViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.sendToPhoneField.keyboardType = UIKeyboardType.PhonePad
+        self.sendToEmailField.keyboardType = UIKeyboardType.EmailAddress
+        
         // Do any additional setup after loading the view.
     }
 

@@ -29,6 +29,9 @@ class AskSomeoneViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.phoneTextField.keyboardType = UIKeyboardType.PhonePad
+        self.emailTextField.keyboardType = UIKeyboardType.EmailAddress
+        
         self.actInd.center = self.view.center
         self.actInd.hidesWhenStopped = true
         self.actInd.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
@@ -105,7 +108,7 @@ class AskSomeoneViewController: UIViewController {
     
 
     @IBAction func sendRequestAction(sender: AnyObject) {
-        println("sending request request")
+        println("sending request")
         
         
         if ((count(phoneTextField.text.utf16) > 0 && (count(phoneTextField.text.utf16) < 10  || !phoneTextField.text.isPhone)) ||
@@ -127,7 +130,8 @@ class AskSomeoneViewController: UIViewController {
             self.object.saveInBackgroundWithBlock({ (success, error) -> Void in
                 if (success) {
                     println("data saved")
-                    let messageTxt = " \(PFUser.currentUser()?.username!) is requesting referrals for \" \(self.messageTextField.text) \" ."
+                    var senderName = PFUser.currentUser()?.objectForKey("fullname") as! String
+                    let messageTxt = " \(senderName) is requesting referrals for \" \(self.messageTextField.text) \" ."
                    self.SendPushToReferrer(messageTxt)
                 } else {
                     println(error)

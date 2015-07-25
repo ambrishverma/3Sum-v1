@@ -113,7 +113,7 @@ function sendMessageSms(phoneNumber, message) {
 	twilio.sendSms({
 		to: prefix + phoneNumber.replace(/\D/g, ''),
 		from: twilioPhoneNumber.replace(/\D/g, ''),
-		body: message + ' For more info, get 3-sum app from http://www.3sum.com.'
+		body: message + ' Find more at http://www.3sumapp.com.'
 	}, function(err, responseData) {
 		if (err) {
 			console.log(err);
