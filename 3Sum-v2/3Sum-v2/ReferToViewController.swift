@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AddressBook
 
 extension String {
     var isEmail: Bool {
@@ -27,7 +28,7 @@ extension String {
 
 }
 
-class ReferToViewController: UIViewController {
+class ReferToViewController: UIViewController, AddressBookDelegate {
 
     @IBOutlet weak var sendToPhoneField: UITextField!
     
@@ -68,12 +69,41 @@ class ReferToViewController: UIViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var referredBizVc: ReferredBizViewController = segue.destinationViewController as! ReferredBizViewController
         
-        referredBizVc.sendToEmail = sendToEmailField.text
-        referredBizVc.sendToPhoneNumber = sendToPhoneField.text
+        if (segue.identifier == "ReferreeLookUp") {
+            var addressBookVC: AddressBookViewController = segue.destinationViewController as! AddressBookViewController
+            
+            addressBookVC.delegate = self
+        } else {
+            var referredBizVc: ReferredBizViewController = segue.destinationViewController as! ReferredBizViewController
         
+            referredBizVc.sendToEmail = sendToEmailField.text
+            referredBizVc.sendToPhoneNumber = sendToPhoneField.text
+        }
     }
     
+    @IBAction func LookupAddressBook(sender: AnyObject) {
+        println("looking up address book for Referree")
+        
+        self.performSegueWithIdentifier("ReferreeLookUp", sender: self)
+    }
+    
+    
+    func ContactSelectedFromAddressBook(abViewController: AddressBookViewController, selectedContact: ABRecordRef) {
+        let selectedContactName = ABRecordCopyCompositeName(selectedContact).takeRetainedValue() as String
+        println("referree: selected contact: \(selectedContactName)")
+        
+        if let mobilePhoneNumber = Utilities.GetMobilePhone(selectedContact) {
+            println("Mobile phone num: \(mobilePhoneNumber)")
+            self.sendToPhoneField.text = mobilePhoneNumber
+        }
+        
+        if let emailAddress = Utilities.GetEmailAddress(selectedContact) {
+            println("Email: \(emailAddress)")
+            self.sendToEmailField.text = emailAddress
+        }
+        
+    }
+
 
 }

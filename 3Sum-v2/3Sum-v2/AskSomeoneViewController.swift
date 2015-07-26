@@ -8,8 +8,9 @@
 
 import UIKit
 import Parse
+import AddressBook
 
-class AskSomeoneViewController: UIViewController {
+class AskSomeoneViewController: UIViewController, AddressBookDelegate {
     
     
     @IBOutlet weak var phoneTextField: UITextField!
@@ -25,6 +26,7 @@ class AskSomeoneViewController: UIViewController {
     
     var actInd: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0, 0, 150, 150))
     
+    var addressBookContact: ABRecordRef!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,15 +58,15 @@ class AskSomeoneViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        if (segue.identifier == "AskLookUp") {
+            var addressBookVC: AddressBookViewController = segue.destinationViewController as! AddressBookViewController
+        
+            addressBookVC.delegate = self
+        }
+        
     }
-    */
     
     
     func showAlert(title: String, message: String) {
@@ -142,7 +144,32 @@ class AskSomeoneViewController: UIViewController {
             self.navigationController?.popToRootViewControllerAnimated(true)
             
         }
-
         
     }
+     
+    @IBAction func LookupAddressBook(sender: AnyObject) {
+        println("looking up address book")
+    
+        self.performSegueWithIdentifier("AskLookUp", sender: self)
+        
+    }
+    
+    
+    
+    func ContactSelectedFromAddressBook(abViewController: AddressBookViewController, selectedContact: ABRecordRef) {
+        let selectedContactName = ABRecordCopyCompositeName(selectedContact).takeRetainedValue() as String
+        println("ask: selected contact: \(selectedContactName)")
+        
+        if let mobilePhoneNumber = Utilities.GetMobilePhone(selectedContact) {
+            println("Mobile phone num: \(mobilePhoneNumber)")
+            self.phoneTextField.text = mobilePhoneNumber
+        }
+         
+        if let emailAddress = Utilities.GetEmailAddress(selectedContact) {
+            println("Email: \(emailAddress)")
+            self.emailTextField.text = emailAddress
+        }
+        
+    }
+    
 }

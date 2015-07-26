@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import AddressBook
 
-class ReferredBizViewController: UIViewController {
+
+class ReferredBizViewController: UIViewController, AddressBookDelegate {
 
     var sendToPhoneNumber: String = ""
     var sendToEmail: String = ""
@@ -54,15 +56,45 @@ class ReferredBizViewController: UIViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var referredSkillsVc: ReferredSkillsViewController = segue.destinationViewController as! ReferredSkillsViewController
+        if (segue.identifier == "BizLookUp") {
+            var addressBookVC: AddressBookViewController = segue.destinationViewController as! AddressBookViewController
+            
+            addressBookVC.delegate = self
+        } else {
+            var referredSkillsVc: ReferredSkillsViewController = segue.destinationViewController as! ReferredSkillsViewController
 
-        referredSkillsVc.refData.referreePhone = sendToPhoneNumber
-        referredSkillsVc.refData.referreeEmail = sendToEmail
+            referredSkillsVc.refData.referreePhone = sendToPhoneNumber
+            referredSkillsVc.refData.referreeEmail = sendToEmail
         
-        referredSkillsVc.refData.referredBizPhone = referredPhoneNumberField.text
-        referredSkillsVc.refData.referredBizEmail = referredEmailField.text
-        referredSkillsVc.refData.referredBizName = referredBizNameField.text
+            referredSkillsVc.refData.referredBizPhone = referredPhoneNumberField.text
+            referredSkillsVc.refData.referredBizEmail = referredEmailField.text
+            referredSkillsVc.refData.referredBizName = referredBizNameField.text
+        }
     }
 
 
+    @IBAction func LookupAddressBook(sender: AnyObject) {
+        println("looking up address book for referred")
+        
+        self.performSegueWithIdentifier("BizLookUp", sender: self)
+    }
+    
+    
+    func ContactSelectedFromAddressBook(abViewController: AddressBookViewController, selectedContact: ABRecordRef) {
+        let selectedContactName = ABRecordCopyCompositeName(selectedContact).takeRetainedValue() as String
+        println("referree: selected contact: \(selectedContactName)")
+        self.referredBizNameField.text = selectedContactName
+        
+        if let mobilePhoneNumber = Utilities.GetMobilePhone(selectedContact) {
+            println("Mobile phone num: \(mobilePhoneNumber)")
+            self.referredPhoneNumberField.text = mobilePhoneNumber
+        }
+        
+        if let emailAddress = Utilities.GetEmailAddress(selectedContact) {
+            println("Email: \(emailAddress)")
+            self.referredEmailField.text = emailAddress
+        }
+        
+    }
+    
 }
