@@ -20,12 +20,19 @@ extension String {
         let PHONE_NO_DASH_REFEX = "^\\d{3}\\d{3}\\d{4}$"
         var phoneTest = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX)
         var phoneTest_noDash = NSPredicate(format: "SELF MATCHES %@", PHONE_NO_DASH_REFEX)
-        if (phoneTest.evaluateWithObject(self) || phoneTest_noDash.evaluateWithObject(self)){
+        if (phoneTest.evaluateWithObject(self)
+            || phoneTest_noDash.evaluateWithObject(self)
+            ){
             return true
         }
         return false
     }
 
+    var extractPhoneNumber: String {
+        let str = self
+        let number = "".join(str.componentsSeparatedByCharactersInSet(NSCharacterSet.decimalDigitCharacterSet().invertedSet) as [String])
+        return number as String
+    }
 }
 
 class ReferToViewController: UIViewController, AddressBookDelegate {
@@ -73,12 +80,14 @@ class ReferToViewController: UIViewController, AddressBookDelegate {
         if (segue.identifier == "ReferreeLookUp") {
             var addressBookVC: AddressBookViewController = segue.destinationViewController as! AddressBookViewController
             
+            self.sendToPhoneField.text = ""
+            self.sendToEmailField.text = ""
             addressBookVC.delegate = self
         } else {
             var referredBizVc: ReferredBizViewController = segue.destinationViewController as! ReferredBizViewController
         
             referredBizVc.sendToEmail = sendToEmailField.text
-            referredBizVc.sendToPhoneNumber = sendToPhoneField.text
+            referredBizVc.sendToPhoneNumber = sendToPhoneField.text.extractPhoneNumber
         }
     }
     
@@ -95,7 +104,7 @@ class ReferToViewController: UIViewController, AddressBookDelegate {
         
         if let mobilePhoneNumber = Utilities.GetMobilePhone(selectedContact) {
             println("Mobile phone num: \(mobilePhoneNumber)")
-            self.sendToPhoneField.text = mobilePhoneNumber
+            self.sendToPhoneField.text = mobilePhoneNumber.extractPhoneNumber
         }
         
         if let emailAddress = Utilities.GetEmailAddress(selectedContact) {

@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:3Sum-v2.xcodeproj">
+      location = "group:/Users/ambrish/github/Swift/iOS/3Sum-v1/3Sum-v2/3Sum.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

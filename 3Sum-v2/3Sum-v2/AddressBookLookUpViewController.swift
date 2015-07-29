@@ -85,8 +85,8 @@ class AddressBookViewController: UIViewController, UITableViewDataSource, UITabl
         
         self.namesTableView.rowHeight = UITableViewAutomaticDimension;
         self.namesTableView.estimatedRowHeight = 40.0
-        
-        self.beginContactSearch()
+        self.getABPermissions()
+        //self.beginContactSearch()
     }
     
     func searchBarSearchButtonClicked( searchBar: UISearchBar)
@@ -103,25 +103,32 @@ class AddressBookViewController: UIViewController, UITableViewDataSource, UITabl
 
     
     func searchContactRecord(searchName: String) -> ABRecordRef? {
-        let allContacts = ABAddressBookCopyArrayOfAllPeople(addressBook).takeRetainedValue() as Array
+
+     //   let allContacts = ABAddressBookCopyArrayOfAllPeople(addressBook).takeRetainedValue() as Array
+        let records = ABAddressBookCopyArrayOfAllPeople(self.addressBook).takeRetainedValue() as NSArray as [ABRecord]
         var contactEntry: ABRecordRef?
         names?.removeAll(keepCapacity: true)
         ABRefs?.removeAll(keepCapacity: true)
-        for record in allContacts {
-            let currentContact: ABRecordRef = record
-            let currentContactName = ABRecordCopyCompositeName(currentContact).takeRetainedValue() as String
-            if (currentContactName.lowercaseString.rangeOfString(searchName.lowercaseString) != nil) {
-                println("found \(currentContactName).")
-                names!.append(currentContactName as String)
-                ABRefs!.append(currentContact)
-                contactEntry = currentContact
+        var count = 0
+        for record in records {
+            let object = ABRecordCopyCompositeName(record)
+            if (object == nil || object.toOpaque() == nil) {
+                println("nil")
+            } else {
+                let name = object.takeRetainedValue() as NSString
+                    if (name.lowercaseString.rangeOfString(searchName.lowercaseString) != nil) {
+                        println("found \(name).")
+                        names!.append(name as String)
+                        ABRefs!.append(record as ABRecordRef)
+                    }
             }
-        }
+       }
         namesTableView.reloadData()
         return contactEntry
     }
     
-    @IBAction func didTapFetch(sender: AnyObject) {
+//    @IBAction func didTapFetch(sender: AnyObject) {
+    func getABPermissions() {
         switch (ABAddressBookGetAuthorizationStatus()){
         case .NotDetermined:
             ABAddressBookRequestAccessWithCompletion(addressBook) {
@@ -144,14 +151,18 @@ class AddressBookViewController: UIViewController, UITableViewDataSource, UITabl
         let records = ABAddressBookCopyArrayOfAllPeople(self.addressBook).takeRetainedValue() as NSArray as [ABRecord]
         names = Array()
         ABRefs = Array()
+        var count = 0
         for record in records {
             let object = ABRecordCopyCompositeName(record)
-            if (object.toOpaque() == nil) {
+            if (object == nil || object.toOpaque() == nil) {
                 println("nil")
             } else {
                 var name = object.takeRetainedValue() as NSString
+                println("found: \(name)")
                 names!.append(name as String)
                 ABRefs!.append(record as ABRecordRef)
+                print("\(count)")
+                count = count+1
             }
         }
         namesTableView.reloadData()

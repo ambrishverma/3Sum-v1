@@ -62,7 +62,8 @@ class AskSomeoneViewController: UIViewController, AddressBookDelegate {
         
         if (segue.identifier == "AskLookUp") {
             var addressBookVC: AddressBookViewController = segue.destinationViewController as! AddressBookViewController
-        
+            self.phoneTextField.text = ""
+            self.emailTextField.text = ""
             addressBookVC.delegate = self
         }
         
@@ -162,7 +163,7 @@ class AskSomeoneViewController: UIViewController, AddressBookDelegate {
         
         if let mobilePhoneNumber = Utilities.GetMobilePhone(selectedContact) {
             println("Mobile phone num: \(mobilePhoneNumber)")
-            self.phoneTextField.text = mobilePhoneNumber
+            self.phoneTextField.text = mobilePhoneNumber.extractPhoneNumber
         }
          
         if let emailAddress = Utilities.GetEmailAddress(selectedContact) {

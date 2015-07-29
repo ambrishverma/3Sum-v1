@@ -10,6 +10,10 @@
 		3FFDAD2A5C13B22663874040 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB9855E4995C73299A8AC935 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		68039CA71B63FCB500E92938 /* contacts.png in Resources */ = {isa = PBXBuildFile; fileRef = 68039CA61B63FCB500E92938 /* contacts.png */; };
 		68039CAB1B6468C700E92938 /* AddressBookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68039CAA1B6468C700E92938 /* AddressBookTableViewCell.swift */; };
+		68039CAD1B66012A00E92938 /* help.png in Resources */ = {isa = PBXBuildFile; fileRef = 68039CAC1B66012A00E92938 /* help.png */; };
+		68039CAF1B6602E900E92938 /* show_property.png in Resources */ = {isa = PBXBuildFile; fileRef = 68039CAE1B6602E900E92938 /* show_property.png */; };
+		68039CB11B6603A800E92938 /* ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 68039CB01B6603A800E92938 /* ok.png */; };
+		68039CB31B6603EC00E92938 /* approval.png in Resources */ = {isa = PBXBuildFile; fileRef = 68039CB21B6603EC00E92938 /* approval.png */; };
 		6816DFE81B5DA19B00930F14 /* AskSomeoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6816DFE71B5DA19B00930F14 /* AskSomeoneViewController.swift */; };
 		6816DFEC1B5EAFF900930F14 /* background-image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6816DFEB1B5EAFF900930F14 /* background-image.jpg */; };
 		681FF9FE1B5793BB0061C6AE /* 3-Sum-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 681FF9FD1B5793BB0061C6AE /* 3-Sum-logo.png */; };
@@ -77,6 +81,10 @@
 		54239790B104FD8EE6C1E20F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		68039CA61B63FCB500E92938 /* contacts.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = contacts.png; path = Images.xcassets/contacts.png; sourceTree = "<group>"; };
 		68039CAA1B6468C700E92938 /* AddressBookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressBookTableViewCell.swift; sourceTree = "<group>"; };
+		68039CAC1B66012A00E92938 /* help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = help.png; path = Images.xcassets/help.png; sourceTree = "<group>"; };
+		68039CAE1B6602E900E92938 /* show_property.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = show_property.png; path = Images.xcassets/show_property.png; sourceTree = "<group>"; };
+		68039CB01B6603A800E92938 /* ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ok.png; path = Images.xcassets/ok.png; sourceTree = "<group>"; };
+		68039CB21B6603EC00E92938 /* approval.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = approval.png; path = Images.xcassets/approval.png; sourceTree = "<group>"; };
 		6816DFE71B5DA19B00930F14 /* AskSomeoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AskSomeoneViewController.swift; sourceTree = "<group>"; };
 		6816DFEB1B5EAFF900930F14 /* background-image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background-image.jpg"; sourceTree = "<group>"; };
 		681FF9FD1B5793BB0061C6AE /* 3-Sum-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "3-Sum-logo.png"; path = "Images.xcassets/3-Sum-logo.png"; sourceTree = "<group>"; };
@@ -90,14 +98,14 @@
 		6851024F1B4F32700002ED4B /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = share.png; path = Images.xcassets/share.png; sourceTree = "<group>"; };
 		685102511B4F38B50002ED4B /* OfferViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferViewCell.swift; sourceTree = "<group>"; };
 		68580F351B636DC200EA306F /* AddressBookLookUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressBookLookUpViewController.swift; sourceTree = "<group>"; };
-		6862D9441B4A09F500745516 /* 3Sum-v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "3Sum-v2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6862D9441B4A09F500745516 /* 3Sum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3Sum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6862D9481B4A09F500745516 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6862D9491B4A09F500745516 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6862D94B1B4A09F500745516 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6862D94E1B4A09F500745516 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6862D9501B4A09F500745516 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6862D9531B4A09F500745516 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		6862D9591B4A09F500745516 /* 3Sum-v2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "3Sum-v2Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6862D9591B4A09F500745516 /* 3SumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 3SumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6862D95E1B4A09F500745516 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6862D95F1B4A09F500745516 /* _Sum_v2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _Sum_v2Tests.swift; sourceTree = "<group>"; };
 		6862D9691B4A0A2E00745516 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../../../../Downloads/parse-library-1.7.5/Bolts.framework"; sourceTree = "<group>"; };
@@ -213,8 +221,8 @@
 		6862D9451B4A09F500745516 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6862D9441B4A09F500745516 /* 3Sum-v2.app */,
-				6862D9591B4A09F500745516 /* 3Sum-v2Tests.xctest */,
+				6862D9441B4A09F500745516 /* 3Sum.app */,
+				6862D9591B4A09F500745516 /* 3SumTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -285,6 +293,10 @@
 		6862D9D81B4B68F700745516 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				68039CB21B6603EC00E92938 /* approval.png */,
+				68039CB01B6603A800E92938 /* ok.png */,
+				68039CAE1B6602E900E92938 /* show_property.png */,
+				68039CAC1B66012A00E92938 /* help.png */,
 				68039CA61B63FCB500E92938 /* contacts.png */,
 				6816DFEB1B5EAFF900930F14 /* background-image.jpg */,
 				687814E21B5C0989000EC323 /* butting_in.png */,
@@ -312,9 +324,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6862D9431B4A09F500745516 /* 3Sum-v2 */ = {
+		6862D9431B4A09F500745516 /* 3Sum */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6862D9631B4A09F500745516 /* Build configuration list for PBXNativeTarget "3Sum-v2" */;
+			buildConfigurationList = 6862D9631B4A09F500745516 /* Build configuration list for PBXNativeTarget "3Sum" */;
 			buildPhases = (
 				062FC51D521858B0B777EB99 /* Check Pods Manifest.lock */,
 				6862D9401B4A09F500745516 /* Sources */,
@@ -327,14 +339,14 @@
 			);
 			dependencies = (
 			);
-			name = "3Sum-v2";
+			name = 3Sum;
 			productName = "3Sum-v2";
-			productReference = 6862D9441B4A09F500745516 /* 3Sum-v2.app */;
+			productReference = 6862D9441B4A09F500745516 /* 3Sum.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6862D9581B4A09F500745516 /* 3Sum-v2Tests */ = {
+		6862D9581B4A09F500745516 /* 3SumTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6862D9661B4A09F500745516 /* Build configuration list for PBXNativeTarget "3Sum-v2Tests" */;
+			buildConfigurationList = 6862D9661B4A09F500745516 /* Build configuration list for PBXNativeTarget "3SumTests" */;
 			buildPhases = (
 				6862D9551B4A09F500745516 /* Sources */,
 				6862D9561B4A09F500745516 /* Frameworks */,
@@ -345,9 +357,9 @@
 			dependencies = (
 				6862D95B1B4A09F500745516 /* PBXTargetDependency */,
 			);
-			name = "3Sum-v2Tests";
+			name = 3SumTests;
 			productName = "3Sum-v2Tests";
-			productReference = 6862D9591B4A09F500745516 /* 3Sum-v2Tests.xctest */;
+			productReference = 6862D9591B4A09F500745516 /* 3SumTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -370,7 +382,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6862D93F1B4A09F500745516 /* Build configuration list for PBXProject "3Sum-v2" */;
+			buildConfigurationList = 6862D93F1B4A09F500745516 /* Build configuration list for PBXProject "3Sum" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -383,8 +395,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6862D9431B4A09F500745516 /* 3Sum-v2 */,
-				6862D9581B4A09F500745516 /* 3Sum-v2Tests */,
+				6862D9431B4A09F500745516 /* 3Sum */,
+				6862D9581B4A09F500745516 /* 3SumTests */,
 			);
 		};
 /* End PBXProject section */
@@ -407,6 +419,7 @@
 				6816DFEC1B5EAFF900930F14 /* background-image.jpg in Resources */,
 				6862D9D51B4B56E200745516 /* shop.png in Resources */,
 				687814E61B5C0989000EC323 /* currency_exchange.png in Resources */,
+				68039CB11B6603A800E92938 /* ok.png in Resources */,
 				6862D9CF1B4B522200745516 /* refer-wire.jpg in Resources */,
 				687814E01B59BCCD000EC323 /* approve.png in Resources */,
 				685102421B4E05910002ED4B /* piping.png in Resources */,
@@ -414,7 +427,10 @@
 				6862D9511B4A09F500745516 /* Images.xcassets in Resources */,
 				6862D9CD1B4B510900745516 /* refer-blue.jpg in Resources */,
 				685102461B4E079B0002ED4B /* maintenance.png in Resources */,
+				68039CB31B6603EC00E92938 /* approval.png in Resources */,
+				68039CAD1B66012A00E92938 /* help.png in Resources */,
 				687814E51B5C0989000EC323 /* butting_in.png in Resources */,
+				68039CAF1B6602E900E92938 /* show_property.png in Resources */,
 				6862D9C91B4A84E300745516 /* redeem.jpg in Resources */,
 				685102501B4F32700002ED4B /* share.png in Resources */,
 			);
@@ -511,7 +527,7 @@
 /* Begin PBXTargetDependency section */
 		6862D95B1B4A09F500745516 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6862D9431B4A09F500745516 /* 3Sum-v2 */;
+			target = 6862D9431B4A09F500745516 /* 3Sum */;
 			targetProxy = 6862D95A1B4A09F500745516 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -636,7 +652,7 @@
 				INFOPLIST_FILE = "3Sum-v2/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = 3Sum;
 				PROVISIONING_PROFILE = "cfe0c077-a5c8-4639-ba1c-ef520fa08efb";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -657,7 +673,7 @@
 				INFOPLIST_FILE = "3Sum-v2/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = 3Sum;
 				PROVISIONING_PROFILE = "cfe0c077-a5c8-4639-ba1c-ef520fa08efb";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -679,7 +695,7 @@
 				);
 				INFOPLIST_FILE = "3Sum-v2Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = 3SumTests;
 				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/3Sum-v2.app/3Sum-v2";
 			};
@@ -697,7 +713,7 @@
 				);
 				INFOPLIST_FILE = "3Sum-v2Tests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = 3SumTests;
 				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/3Sum-v2.app/3Sum-v2";
 			};
@@ -706,7 +722,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6862D93F1B4A09F500745516 /* Build configuration list for PBXProject "3Sum-v2" */ = {
+		6862D93F1B4A09F500745516 /* Build configuration list for PBXProject "3Sum" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6862D9611B4A09F500745516 /* Debug */,
@@ -715,7 +731,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6862D9631B4A09F500745516 /* Build configuration list for PBXNativeTarget "3Sum-v2" */ = {
+		6862D9631B4A09F500745516 /* Build configuration list for PBXNativeTarget "3Sum" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6862D9641B4A09F500745516 /* Debug */,
@@ -724,7 +740,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6862D9661B4A09F500745516 /* Build configuration list for PBXNativeTarget "3Sum-v2Tests" */ = {
+		6862D9661B4A09F500745516 /* Build configuration list for PBXNativeTarget "3SumTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6862D9671B4A09F500745516 /* Debug */,

@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6862D9431B4A09F500745516"
-               BuildableName = "3Sum-v2.app"
-               BlueprintName = "3Sum-v2"
-               ReferencedContainer = "container:3Sum-v2.xcodeproj">
+               BuildableName = "3Sum.app"
+               BlueprintName = "3Sum"
+               ReferencedContainer = "container:3Sum.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6862D9581B4A09F500745516"
-               BuildableName = "3Sum-v2Tests.xctest"
-               BlueprintName = "3Sum-v2Tests"
-               ReferencedContainer = "container:3Sum-v2.xcodeproj">
+               BuildableName = "3SumTests.xctest"
+               BlueprintName = "3SumTests"
+               ReferencedContainer = "container:3Sum.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6862D9581B4A09F500745516"
-               BuildableName = "3Sum-v2Tests.xctest"
-               BlueprintName = "3Sum-v2Tests"
-               ReferencedContainer = "container:3Sum-v2.xcodeproj">
+               BuildableName = "3SumTests.xctest"
+               BlueprintName = "3SumTests"
+               ReferencedContainer = "container:3Sum.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6862D9431B4A09F500745516"
-            BuildableName = "3Sum-v2.app"
-            BlueprintName = "3Sum-v2"
-            ReferencedContainer = "container:3Sum-v2.xcodeproj">
+            BuildableName = "3Sum.app"
+            BlueprintName = "3Sum"
+            ReferencedContainer = "container:3Sum.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6862D9431B4A09F500745516"
-            BuildableName = "3Sum-v2.app"
-            BlueprintName = "3Sum-v2"
-            ReferencedContainer = "container:3Sum-v2.xcodeproj">
+            BuildableName = "3Sum.app"
+            BlueprintName = "3Sum"
+            ReferencedContainer = "container:3Sum.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,9 +96,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6862D9431B4A09F500745516"
-            BuildableName = "3Sum-v2.app"
-            BlueprintName = "3Sum-v2"
-            ReferencedContainer = "container:3Sum-v2.xcodeproj">
+            BuildableName = "3Sum.app"
+            BlueprintName = "3Sum"
+            ReferencedContainer = "container:3Sum.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

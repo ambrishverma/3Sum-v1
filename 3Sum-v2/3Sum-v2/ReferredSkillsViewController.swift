@@ -142,7 +142,7 @@ class ReferredSkillsViewController: UIViewController {
         } else {	
             self.actInd.startAnimating()
             
-            self.refData.referrerPhone = PFUser.currentUser()!.username!
+            self.refData.referrerPhone = PFUser.currentUser()!.username!.extractPhoneNumber
             self.refData.referrerName = PFUser.currentUser()!.objectForKey("fullname") as! String
             self.refData.referredBizSkills = skillField.text
             self.object["ReferrerPhone"] = self.refData.referrerPhone

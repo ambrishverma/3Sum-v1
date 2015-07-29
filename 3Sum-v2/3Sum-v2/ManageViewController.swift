@@ -83,7 +83,7 @@ class ManageViewController: UIViewController {
         } else {
             self.actInd.startAnimating()
             self.object["username"] = PFUser.currentUser()?.username
-            self.object["bizPhone"] = phoneNumber
+            self.object["bizPhone"] = phoneNumber.extractPhoneNumber
             self.object["bizName"] = name
             self.object["bizAddres"] = address
             var serviceArray = NSMutableArray()

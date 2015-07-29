@@ -58,7 +58,8 @@ class ReferredBizViewController: UIViewController, AddressBookDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "BizLookUp") {
             var addressBookVC: AddressBookViewController = segue.destinationViewController as! AddressBookViewController
-            
+            self.referredPhoneNumberField.text = ""
+            self.referredEmailField.text = ""
             addressBookVC.delegate = self
         } else {
             var referredSkillsVc: ReferredSkillsViewController = segue.destinationViewController as! ReferredSkillsViewController
@@ -66,7 +67,7 @@ class ReferredBizViewController: UIViewController, AddressBookDelegate {
             referredSkillsVc.refData.referreePhone = sendToPhoneNumber
             referredSkillsVc.refData.referreeEmail = sendToEmail
         
-            referredSkillsVc.refData.referredBizPhone = referredPhoneNumberField.text
+            referredSkillsVc.refData.referredBizPhone = referredPhoneNumberField.text.extractPhoneNumber
             referredSkillsVc.refData.referredBizEmail = referredEmailField.text
             referredSkillsVc.refData.referredBizName = referredBizNameField.text
         }
@@ -87,7 +88,7 @@ class ReferredBizViewController: UIViewController, AddressBookDelegate {
         
         if let mobilePhoneNumber = Utilities.GetMobilePhone(selectedContact) {
             println("Mobile phone num: \(mobilePhoneNumber)")
-            self.referredPhoneNumberField.text = mobilePhoneNumber
+            self.referredPhoneNumberField.text = mobilePhoneNumber.extractPhoneNumber
         }
         
         if let emailAddress = Utilities.GetEmailAddress(selectedContact) {
