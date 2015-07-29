@@ -43,7 +43,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         }
 
         
-        self.mainLogoImageView.image = UIImage(named: "3-Sum-logo")
+        self.mainLogoImageView.image = UIImage(named: "3Sum_Icon_7_29")
         if (PFUser.currentUser() == nil) {
             self.loginSignUpButton.hidden = false;
             self.logoutButton.hidden = true;
@@ -53,7 +53,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             loginLogoTitle.text = "3-Sum Login"
             self.loginViewController.logInView!.logo = loginLogoTitle
             
-            let logo = UIImage(named: "3-Sum-logo");
+            let logo = UIImage(named: "3Sum_Icon_7_29");
 
             let imageView = UIImageView(image:logo)
             imageView.frame.size.width = 100;

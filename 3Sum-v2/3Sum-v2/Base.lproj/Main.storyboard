@@ -9,7 +9,7 @@
         <!--Look Up Address Book-->
         <scene sceneID="lcU-nb-1M7">
             <objects>
-                <viewController storyboardIdentifier="lookUpVC" title="Look Up Address Book" id="Dfd-ql-gds" userLabel="Look Up Address Book" customClass="AddressBookViewController" customModule="_Sum_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="lookUpVC" title="Look Up Address Book" id="Dfd-ql-gds" userLabel="Look Up Address Book" customClass="AddressBookViewController" customModule="_Sum" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BLY-yi-rRz"/>
                         <viewControllerLayoutGuide type="bottom" id="si2-q9-wsJ"/>
@@ -26,7 +26,7 @@
                                 <rect key="frame" x="18" y="117" width="564" height="483"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="addressBookCell" id="8yw-9L-beR" customClass="AddressBookTableViewCell" customModule="_Sum_v2" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="addressBookCell" id="8yw-9L-beR" customClass="AddressBookTableViewCell" customModule="_Sum" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8yw-9L-beR" id="X1b-mw-4KM">
@@ -68,7 +68,7 @@
         <!--Ask Someone-->
         <scene sceneID="Qy7-Ya-Ka4">
             <objects>
-                <viewController storyboardIdentifier="askSomeoneVC" title="Ask Your Network" id="cEX-ae-8qS" userLabel="Ask Someone" customClass="AskSomeoneViewController" customModule="_Sum_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="askSomeoneVC" title="Ask Your Network" id="cEX-ae-8qS" userLabel="Ask Someone" customClass="AskSomeoneViewController" customModule="_Sum" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3gx-XO-LGA"/>
                         <viewControllerLayoutGuide type="bottom" id="Y2C-Kh-fTX"/>
@@ -165,7 +165,7 @@
         <!--Send Referral To-->
         <scene sceneID="m3o-8L-dEe">
             <objects>
-                <viewController storyboardIdentifier="referToVC" title="Send Referral To" id="bUo-LW-F8A" customClass="ReferToViewController" customModule="_Sum_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="referToVC" title="Send Referral To" id="bUo-LW-F8A" customClass="ReferToViewController" customModule="_Sum" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BcS-LD-zPD"/>
                         <viewControllerLayoutGuide type="bottom" id="AJb-Gc-bMx"/>
@@ -254,7 +254,7 @@
         <!--Referred Business Info-->
         <scene sceneID="KuR-TE-7IO">
             <objects>
-                <viewController storyboardIdentifier="ReferredBizInfoVC" title="Referred Business Info" id="QKj-ZI-uI2" customClass="ReferredBizViewController" customModule="_Sum_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReferredBizInfoVC" title="Referred Business Info" id="QKj-ZI-uI2" customClass="ReferredBizViewController" customModule="_Sum" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aQ5-V9-mwe"/>
                         <viewControllerLayoutGuide type="bottom" id="YXo-1m-947"/>
@@ -364,7 +364,7 @@
         <!--Referred Skills-->
         <scene sceneID="3rb-Se-AJ6">
             <objects>
-                <viewController title="Referred Skills" id="t4w-Gd-dFE" customClass="ReferredSkillsViewController" customModule="_Sum_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Referred Skills" id="t4w-Gd-dFE" customClass="ReferredSkillsViewController" customModule="_Sum" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cgp-16-76H"/>
                         <viewControllerLayoutGuide type="bottom" id="baR-Ys-zXa"/>
@@ -572,7 +572,7 @@
         <!--3 - Sum-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController storyboardIdentifier="3sumVC" title="3 - Sum" id="vXZ-lx-hvc" customClass="ViewController" customModule="_Sum_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="3sumVC" title="3 - Sum" id="vXZ-lx-hvc" customClass="ViewController" customModule="_Sum" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EyN-La-4yy"/>
                         <viewControllerLayoutGuide type="bottom" id="av4-A3-HCA"/>
@@ -595,7 +595,7 @@
                                     <action selector="simpleAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gfM-at-tn5"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3-Sum-logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="viT-CK-PXW">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3Sum_Icon_7_29.png" translatesAutoresizingMaskIntoConstraints="NO" id="viT-CK-PXW">
                                 <rect key="frame" x="218" y="70" width="164" height="164"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="viT-CK-PXW" secondAttribute="height" multiplier="1:1" id="s8M-Dv-KeU"/>
@@ -605,7 +605,7 @@
                                 <rect key="frame" x="26" y="239" width="548" height="90"/>
                                 <subviews>
                                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="decision.png" translatesAutoresizingMaskIntoConstraints="NO" id="QPh-Iu-QPH">
-                                        <rect key="frame" x="110" y="0.0" width="90" height="90"/>
+                                        <rect key="frame" x="79" y="0.0" width="90" height="90"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="QPh-Iu-QPH" secondAttribute="height" multiplier="1:1" id="Kk2-dp-tPn"/>
                                         </constraints>
@@ -622,8 +622,8 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask Someone" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ih-EI-lOQ">
-                                        <rect key="frame" x="210" y="33" width="128" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <rect key="frame" x="179" y="27" width="191" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -652,14 +652,14 @@
                                 <rect key="frame" x="26" y="331" width="548" height="90"/>
                                 <subviews>
                                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="show_property.png" translatesAutoresizingMaskIntoConstraints="NO" id="rH4-hT-KWi">
-                                        <rect key="frame" x="108" y="0.0" width="90" height="90"/>
+                                        <rect key="frame" x="75" y="0.0" width="90" height="90"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="rH4-hT-KWi" secondAttribute="height" multiplier="1:1" id="RJm-UA-UuF"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View Referrals" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azy-lw-5YY">
-                                        <rect key="frame" x="208" y="33" width="132" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <rect key="frame" x="175" y="27" width="198" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -699,14 +699,14 @@
                                 <rect key="frame" x="26" y="423" width="548" height="90"/>
                                 <subviews>
                                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="approve.png" translatesAutoresizingMaskIntoConstraints="NO" id="sbK-m2-88w">
-                                        <rect key="frame" x="103" y="0.0" width="90" height="90"/>
+                                        <rect key="frame" x="67" y="0.0" width="90" height="90"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="sbK-m2-88w" secondAttribute="height" multiplier="1:1" id="Tm3-RL-MQc"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Refer Someone" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEL-bc-jhK">
-                                        <rect key="frame" x="203" y="33" width="143" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <rect key="frame" x="167" y="27" width="214" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -745,14 +745,14 @@
                                 <rect key="frame" x="26" y="515" width="548" height="90"/>
                                 <subviews>
                                     <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shop.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jdw-rh-T7I">
-                                        <rect key="frame" x="89" y="0.0" width="96" height="90"/>
+                                        <rect key="frame" x="49" y="0.0" width="96" height="90"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Jdw-rh-T7I" secondAttribute="height" multiplier="97:91" id="m4p-vw-wf8"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manage Services" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPW-wB-VEQ">
-                                        <rect key="frame" x="195" y="33" width="159" height="24"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <rect key="frame" x="155" y="27" width="238" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -864,14 +864,14 @@
         <!--View Referrals-->
         <scene sceneID="F87-qH-dS6">
             <objects>
-                <tableViewController storyboardIdentifier="redeemVC" title="View Referrals" id="m0G-5d-aXB" customClass="RedeemTableViewController" customModule="_Sum_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="redeemVC" title="View Referrals" id="m0G-5d-aXB" customClass="RedeemTableViewController" customModule="_Sum" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="200" sectionHeaderHeight="22" sectionFooterHeight="22" id="nkN-cd-kYK" userLabel="Referrals Avaialble To Redeem">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="offerCell" rowHeight="200" id="Hhv-HL-Ehq" customClass="OfferViewCell" customModule="_Sum_v2" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="offerCell" rowHeight="200" id="Hhv-HL-Ehq" customClass="OfferViewCell" customModule="_Sum" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="86" width="320" height="103"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hhv-HL-Ehq" id="uH8-bJ-DPo">
@@ -987,7 +987,7 @@
         <!--Login to 3Sum-->
         <scene sceneID="TVa-rP-3P2">
             <objects>
-                <viewController storyboardIdentifier="loginVC" title="Login to 3Sum" id="jan-Qj-GVJ" customClass="CustomLoginViewController" customModule="_Sum_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginVC" title="Login to 3Sum" id="jan-Qj-GVJ" customClass="CustomLoginViewController" customModule="_Sum" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rfJ-9p-mjn"/>
                         <viewControllerLayoutGuide type="bottom" id="xoY-Is-lEB"/>
@@ -1071,7 +1071,7 @@
         <!--Manage Profile & Services-->
         <scene sceneID="YeY-of-euK">
             <objects>
-                <viewController storyboardIdentifier="manageVC" title="Manage Profile &amp; Services" id="rAG-eT-WY4" customClass="ManageViewController" customModule="_Sum_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="manageVC" title="Manage Profile &amp; Services" id="rAG-eT-WY4" customClass="ManageViewController" customModule="_Sum" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dgl-mP-1XB"/>
                         <viewControllerLayoutGuide type="bottom" id="Vdq-So-3vp"/>
@@ -1183,7 +1183,7 @@
         <!--User Profile Information-->
         <scene sceneID="ENv-1M-s3E">
             <objects>
-                <viewController storyboardIdentifier="signupVC" title="User Profile Information" id="1Vt-jd-j8w" customClass="CustomSignUpViewController" customModule="_Sum_v2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="signupVC" title="User Profile Information" id="1Vt-jd-j8w" customClass="CustomSignUpViewController" customModule="_Sum" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Xiv-aG-35D"/>
                         <viewControllerLayoutGuide type="bottom" id="xKn-p8-Dqz"/>
@@ -1289,7 +1289,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="3-Sum-logo.png" width="720" height="540"/>
+        <image name="3Sum_Icon_7_29.png" width="560" height="522"/>
         <image name="approve.png" width="96" height="96"/>
         <image name="butting_in.png" width="96" height="96"/>
         <image name="contacts.png" width="96" height="96"/>

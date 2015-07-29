@@ -14,6 +14,7 @@
 		68039CAF1B6602E900E92938 /* show_property.png in Resources */ = {isa = PBXBuildFile; fileRef = 68039CAE1B6602E900E92938 /* show_property.png */; };
 		68039CB11B6603A800E92938 /* ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 68039CB01B6603A800E92938 /* ok.png */; };
 		68039CB31B6603EC00E92938 /* approval.png in Resources */ = {isa = PBXBuildFile; fileRef = 68039CB21B6603EC00E92938 /* approval.png */; };
+		68039CB51B694C3E00E92938 /* 3Sum_Icon_7_29.png in Resources */ = {isa = PBXBuildFile; fileRef = 68039CB41B694C3D00E92938 /* 3Sum_Icon_7_29.png */; };
 		6816DFE81B5DA19B00930F14 /* AskSomeoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6816DFE71B5DA19B00930F14 /* AskSomeoneViewController.swift */; };
 		6816DFEC1B5EAFF900930F14 /* background-image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6816DFEB1B5EAFF900930F14 /* background-image.jpg */; };
 		681FF9FE1B5793BB0061C6AE /* 3-Sum-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 681FF9FD1B5793BB0061C6AE /* 3-Sum-logo.png */; };
@@ -85,6 +86,7 @@
 		68039CAE1B6602E900E92938 /* show_property.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = show_property.png; path = Images.xcassets/show_property.png; sourceTree = "<group>"; };
 		68039CB01B6603A800E92938 /* ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ok.png; path = Images.xcassets/ok.png; sourceTree = "<group>"; };
 		68039CB21B6603EC00E92938 /* approval.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = approval.png; path = Images.xcassets/approval.png; sourceTree = "<group>"; };
+		68039CB41B694C3D00E92938 /* 3Sum_Icon_7_29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3Sum_Icon_7_29.png; sourceTree = "<group>"; };
 		6816DFE71B5DA19B00930F14 /* AskSomeoneViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AskSomeoneViewController.swift; sourceTree = "<group>"; };
 		6816DFEB1B5EAFF900930F14 /* background-image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background-image.jpg"; sourceTree = "<group>"; };
 		681FF9FD1B5793BB0061C6AE /* 3-Sum-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "3-Sum-logo.png"; path = "Images.xcassets/3-Sum-logo.png"; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 		6862D9D81B4B68F700745516 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				68039CB41B694C3D00E92938 /* 3Sum_Icon_7_29.png */,
 				68039CB21B6603EC00E92938 /* approval.png */,
 				68039CB01B6603A800E92938 /* ok.png */,
 				68039CAE1B6602E900E92938 /* show_property.png */,
@@ -423,6 +426,7 @@
 				6862D9CF1B4B522200745516 /* refer-wire.jpg in Resources */,
 				687814E01B59BCCD000EC323 /* approve.png in Resources */,
 				685102421B4E05910002ED4B /* piping.png in Resources */,
+				68039CB51B694C3E00E92938 /* 3Sum_Icon_7_29.png in Resources */,
 				6862D9541B4A09F500745516 /* LaunchScreen.xib in Resources */,
 				6862D9511B4A09F500745516 /* Images.xcassets in Resources */,
 				6862D9CD1B4B510900745516 /* refer-blue.jpg in Resources */,
@@ -697,7 +701,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = 3SumTests;
 				PROVISIONING_PROFILE = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/3Sum-v2.app/3Sum-v2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/3Sum.app/3Sum";
 			};
 			name = Debug;
 		};
@@ -715,7 +719,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = 3SumTests;
 				PROVISIONING_PROFILE = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/3Sum-v2.app/3Sum-v2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/3Sum.app/3Sum";
 			};
 			name = Release;
 		};
