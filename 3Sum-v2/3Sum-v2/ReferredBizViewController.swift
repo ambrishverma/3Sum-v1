@@ -14,6 +14,7 @@ class ReferredBizViewController: UIViewController, AddressBookDelegate {
 
     var sendToPhoneNumber: String = ""
     var sendToEmail: String = ""
+    var sendToName: String = ""
     
     @IBOutlet weak var referredBizNameField: UITextField!
     
@@ -66,6 +67,7 @@ class ReferredBizViewController: UIViewController, AddressBookDelegate {
 
             referredSkillsVc.refData.referreePhone = sendToPhoneNumber
             referredSkillsVc.refData.referreeEmail = sendToEmail
+            referredSkillsVc.refData.referreeName = sendToName
         
             referredSkillsVc.refData.referredBizPhone = referredPhoneNumberField.text.extractPhoneNumber
             referredSkillsVc.refData.referredBizEmail = referredEmailField.text

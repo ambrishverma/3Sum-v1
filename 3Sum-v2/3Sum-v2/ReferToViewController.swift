@@ -41,6 +41,8 @@ class ReferToViewController: UIViewController, AddressBookDelegate {
     
     @IBOutlet weak var sendToEmailField: UITextField!
 
+    @IBOutlet weak var sendToNameField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.sendToPhoneField.keyboardType = UIKeyboardType.PhonePad
@@ -82,12 +84,14 @@ class ReferToViewController: UIViewController, AddressBookDelegate {
             
             self.sendToPhoneField.text = ""
             self.sendToEmailField.text = ""
+            self.sendToNameField.text = ""
             addressBookVC.delegate = self
         } else {
             var referredBizVc: ReferredBizViewController = segue.destinationViewController as! ReferredBizViewController
         
             referredBizVc.sendToEmail = sendToEmailField.text
             referredBizVc.sendToPhoneNumber = sendToPhoneField.text.extractPhoneNumber
+            referredBizVc.sendToName = sendToNameField.text
         }
     }
     
@@ -99,8 +103,10 @@ class ReferToViewController: UIViewController, AddressBookDelegate {
     
     
     func ContactSelectedFromAddressBook(abViewController: AddressBookViewController, selectedContact: ABRecordRef) {
-        let selectedContactName = ABRecordCopyCompositeName(selectedContact).takeRetainedValue() as String
-        println("referree: selected contact: \(selectedContactName)")
+        if let selectedContactName = ABRecordCopyCompositeName(selectedContact).takeRetainedValue() as? String {
+            println("ask: selected contact: \(selectedContactName)")
+            self.sendToNameField.text = selectedContactName
+        }
         
         if let mobilePhoneNumber = Utilities.GetMobilePhone(selectedContact) {
             println("Mobile phone num: \(mobilePhoneNumber)")

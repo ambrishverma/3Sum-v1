@@ -89,6 +89,11 @@ class AddressBookViewController: UIViewController, UITableViewDataSource, UITabl
         //self.beginContactSearch()
     }
     
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        searchBarSearchButtonClicked (searchBar)
+    }
+    
+    
     func searchBarSearchButtonClicked( searchBar: UISearchBar)
     {
         var searchContactName = contactSearchBar.text

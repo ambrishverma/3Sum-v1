@@ -17,9 +17,12 @@ class AskSomeoneViewController: UIViewController, AddressBookDelegate {
 
     @IBOutlet weak var emailTextField: UITextField!
     
-    @IBOutlet weak var messageTextField: UITextField!
 
-    
+    @IBOutlet weak var nameTextField: UITextField!
+
+    @IBOutlet weak var messageTextField: UITextView!
+
+    let categoryPickerValues = ["Handyman", "Cleaning", "Plumbing", "Electricals", "Moving", "Painting", "Real-Estate", "Accountant", "Dentist", "Other"]
     
     
     var object: PFObject!
@@ -38,6 +41,8 @@ class AskSomeoneViewController: UIViewController, AddressBookDelegate {
         self.actInd.hidesWhenStopped = true
         self.actInd.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
         view.addSubview(self.actInd)
+        
+        
         if (self.object != nil) {
             // populate existing business
             /*
@@ -52,6 +57,8 @@ class AskSomeoneViewController: UIViewController, AddressBookDelegate {
         // Do any additional setup after loading the view.
     }
 
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -63,6 +70,7 @@ class AskSomeoneViewController: UIViewController, AddressBookDelegate {
         if (segue.identifier == "AskLookUp") {
             var addressBookVC: AddressBookViewController = segue.destinationViewController as! AddressBookViewController
             self.phoneTextField.text = ""
+            self.nameTextField.text = ""
             self.emailTextField.text = ""
             addressBookVC.delegate = self
         }
@@ -125,8 +133,10 @@ class AskSomeoneViewController: UIViewController, AddressBookDelegate {
             self.actInd.startAnimating()
             
             self.object["ReferrerPhone"] = phoneTextField.text
-            self.object["RefererEmail"] = emailTextField.text
+            self.object["ReferrerName"] = nameTextField.text
+            self.object["ReferrerEmail"] = emailTextField.text
             self.object["RequesterPhone"] = PFUser.currentUser()?.username!
+            self.object["RequesterName"] = PFUser.currentUser()!.objectForKey("fullname") as! String
             self.object["ReferralRequestMessage"] = messageTextField.text
             
             
@@ -158,8 +168,10 @@ class AskSomeoneViewController: UIViewController, AddressBookDelegate {
     
     
     func ContactSelectedFromAddressBook(abViewController: AddressBookViewController, selectedContact: ABRecordRef) {
-        let selectedContactName = ABRecordCopyCompositeName(selectedContact).takeRetainedValue() as String
-        println("ask: selected contact: \(selectedContactName)")
+        if let selectedContactName = ABRecordCopyCompositeName(selectedContact).takeRetainedValue() as? String {
+            println("ask: selected contact: \(selectedContactName)")
+            self.nameTextField.text = selectedContactName
+        }
         
         if let mobilePhoneNumber = Utilities.GetMobilePhone(selectedContact) {
             println("Mobile phone num: \(mobilePhoneNumber)")
@@ -170,6 +182,7 @@ class AskSomeoneViewController: UIViewController, AddressBookDelegate {
             println("Email: \(emailAddress)")
             self.emailTextField.text = emailAddress
         }
+        
         
     }
     

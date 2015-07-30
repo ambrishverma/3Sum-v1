@@ -50,7 +50,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             self.loginViewController.fields = PFLogInFields.UsernameAndPassword | PFLogInFields.LogInButton | PFLogInFields.SignUpButton | PFLogInFields.PasswordForgotten | PFLogInFields.DismissButton
             
             var loginLogoTitle = UILabel()
-            loginLogoTitle.text = "3-Sum Login"
+            loginLogoTitle.text = "3Sum Login"
             self.loginViewController.logInView!.logo = loginLogoTitle
             
             let logo = UIImage(named: "3Sum_Icon_7_29");
@@ -64,7 +64,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
             self.loginViewController.delegate = self
             
             var signUpLogoTitle = UILabel()
-            signUpLogoTitle.text = "3-Sum Sign Up"
+            signUpLogoTitle.text = "3Sum Sign Up"
             self.signUpViewController.signUpView!.logo = signUpLogoTitle
             self.signUpViewController.signUpView!.addSubview(imageView)
             
