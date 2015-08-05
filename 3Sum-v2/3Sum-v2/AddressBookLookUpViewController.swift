@@ -27,6 +27,31 @@ class Utilities {
         return nil
     }
     
+    static func GetAltPhone(abEntry: ABRecordRef) -> String? {
+        let phoneNumbers: ABMultiValueRef = ABRecordCopyValue(abEntry, kABPersonPhoneProperty).takeRetainedValue() as ABMultiValueRef
+        for(var index:CFIndex = 0; index < ABMultiValueGetCount(phoneNumbers); ++index) {
+            let unmanagedPhoneLabel = ABMultiValueCopyLabelAtIndex(phoneNumbers, index)
+            let phoneLabel: String = Unmanaged.fromOpaque(
+                unmanagedPhoneLabel.toOpaque()).takeUnretainedValue() as NSObject as! String
+            
+            let compareResult: CFComparisonResult = CFStringCompare(phoneLabel, kABPersonPhoneMobileLabel, CFStringCompareFlags.CompareCaseInsensitive)
+            
+            if (compareResult == CFComparisonResult.CompareEqualTo) {
+                continue
+            } else {
+                let unmanagedPhoneNumber = ABMultiValueCopyValueAtIndex(phoneNumbers, index)
+                let phoneNumber: String = Unmanaged.fromOpaque(
+                    unmanagedPhoneNumber.toOpaque()).takeUnretainedValue() as NSObject as! String
+                if (phoneNumber == "") {
+                    continue
+                }
+                return phoneNumber
+            }
+            
+        }
+        return nil
+    }
+
     
     static func GetEmailAddress(abEntry: ABRecordRef) -> String? {
         let emails: ABMultiValueRef = ABRecordCopyValue(abEntry, kABPersonEmailProperty).takeRetainedValue() as ABMultiValueRef

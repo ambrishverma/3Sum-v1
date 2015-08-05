@@ -91,7 +91,13 @@ class ReferredBizViewController: UIViewController, AddressBookDelegate {
         if let mobilePhoneNumber = Utilities.GetMobilePhone(selectedContact) {
             println("Mobile phone num: \(mobilePhoneNumber)")
             self.referredPhoneNumberField.text = mobilePhoneNumber.extractPhoneNumber
+        } else if let altPhoneNumber = Utilities.GetAltPhone(selectedContact) {
+            println("Used Alternate phone num: \(altPhoneNumber)")
+            self.referredPhoneNumberField.text = altPhoneNumber.extractPhoneNumber
+        } else {
+            println("No valid phone number found")
         }
+        
         
         if let emailAddress = Utilities.GetEmailAddress(selectedContact) {
             println("Email: \(emailAddress)")

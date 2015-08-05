@@ -143,7 +143,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     
     @IBAction func redeemAction(sender: AnyObject) {
         println("redeem action")
-        self.performSegueWithIdentifier("redeem", sender: self)
+        self.performSegueWithIdentifier("viewReferrals", sender: self)
     }
     
     @IBAction func manageAction(sender: AnyObject) {
