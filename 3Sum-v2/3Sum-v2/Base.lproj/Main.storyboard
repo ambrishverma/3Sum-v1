@@ -809,21 +809,26 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hK-F2-YtW">
-                                <rect key="frame" x="21" y="84" width="558" height="10"/>
+                                <rect key="frame" x="21" y="74" width="558" height="35"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="10" id="ROo-8C-uTa"/>
+                                    <constraint firstAttribute="height" constant="15" id="ROo-8C-uTa"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="logout">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ROo-8C-uTa"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <action selector="customAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="f7F-Vn-knB"/>
                                     <action selector="logoutAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aCB-tM-jUA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sie-xb-HFj">
-                                <rect key="frame" x="21" y="84" width="558" height="10"/>
+                                <rect key="frame" x="21" y="79" width="558" height="10"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="10" id="71e-gM-JR6"/>
                                 </constraints>
@@ -837,7 +842,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3Sum_Icon_7_29.png" translatesAutoresizingMaskIntoConstraints="NO" id="viT-CK-PXW">
-                                <rect key="frame" x="225" y="64" width="150" height="150"/>
+                                <rect key="frame" x="240" y="94" width="120" height="120"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="viT-CK-PXW" secondAttribute="height" multiplier="1:1" id="s8M-Dv-KeU"/>
                                 </constraints>
@@ -1037,7 +1042,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="0xd-No-5Rn" secondAttribute="trailing" constant="10" id="0sb-h2-hgs"/>
                             <constraint firstItem="0pI-Nf-uVA" firstAttribute="bottom" secondItem="av4-A3-HCA" secondAttribute="top" constant="5" id="1e1-rp-xeT"/>
                             <constraint firstItem="6hK-F2-YtW" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="5" id="27v-fU-D6P"/>
-                            <constraint firstItem="Sie-xb-HFj" firstAttribute="top" secondItem="EyN-La-4yy" secondAttribute="bottom" constant="20" id="5sK-RM-hbV"/>
+                            <constraint firstItem="Sie-xb-HFj" firstAttribute="top" secondItem="EyN-La-4yy" secondAttribute="bottom" constant="15" id="5sK-RM-hbV"/>
                             <constraint firstItem="0pI-Nf-uVA" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="6IU-H2-jVf"/>
                             <constraint firstAttribute="centerX" secondItem="0xd-No-5Rn" secondAttribute="centerX" id="8Hm-f4-wGf"/>
                             <constraint firstItem="bNR-mc-umi" firstAttribute="width" secondItem="0xd-No-5Rn" secondAttribute="width" id="8Mi-El-acQ"/>
@@ -1046,7 +1051,7 @@
                             <constraint firstItem="0pI-Nf-uVA" firstAttribute="top" secondItem="qXR-Dl-pSb" secondAttribute="bottom" constant="2" id="Eft-6T-1af"/>
                             <constraint firstItem="bNR-mc-umi" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="HPa-zb-5Vh"/>
                             <constraint firstItem="0xd-No-5Rn" firstAttribute="top" secondItem="bNR-mc-umi" secondAttribute="bottom" constant="2" id="Jef-ba-Ojf"/>
-                            <constraint firstItem="6hK-F2-YtW" firstAttribute="top" secondItem="EyN-La-4yy" secondAttribute="bottom" constant="20" id="Jib-4B-5iQ"/>
+                            <constraint firstItem="6hK-F2-YtW" firstAttribute="top" secondItem="EyN-La-4yy" secondAttribute="bottom" constant="10" id="Jib-4B-5iQ"/>
                             <constraint firstItem="bNR-mc-umi" firstAttribute="height" secondItem="qXR-Dl-pSb" secondAttribute="height" id="KJC-W4-DCx"/>
                             <constraint firstAttribute="centerX" secondItem="0pI-Nf-uVA" secondAttribute="centerX" id="KfI-NW-qng"/>
                             <constraint firstItem="bNR-mc-umi" firstAttribute="height" secondItem="0xd-No-5Rn" secondAttribute="height" id="MNq-1q-9hF"/>
@@ -1064,11 +1069,12 @@
                             <constraint firstItem="Sie-xb-HFj" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="5" id="hCg-Wy-DvE"/>
                             <constraint firstAttribute="centerX" secondItem="viT-CK-PXW" secondAttribute="centerX" id="jqL-iM-0K5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0pI-Nf-uVA" secondAttribute="trailing" constant="10" id="n8Q-iT-0K6"/>
+                            <constraint firstItem="viT-CK-PXW" firstAttribute="top" secondItem="EyN-La-4yy" secondAttribute="bottom" constant="30" id="pq8-3p-noD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qXR-Dl-pSb" secondAttribute="trailing" constant="10" id="x9W-AG-fmD"/>
                             <constraint firstItem="bNR-mc-umi" firstAttribute="width" secondItem="qXR-Dl-pSb" secondAttribute="width" id="xVd-JJ-Q3t"/>
                             <constraint firstItem="0xd-No-5Rn" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="xd7-Jp-775"/>
                             <constraint firstItem="bNR-mc-umi" firstAttribute="top" secondItem="viT-CK-PXW" secondAttribute="bottom" constant="25" id="z7L-9f-EG4"/>
-                            <constraint firstItem="6hK-F2-YtW" firstAttribute="bottom" secondItem="viT-CK-PXW" secondAttribute="top" constant="30" id="zTH-hG-kgh"/>
+                            <constraint firstItem="6hK-F2-YtW" firstAttribute="bottom" secondItem="viT-CK-PXW" secondAttribute="top" constant="15" id="zTH-hG-kgh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="3Sum" id="p69-Aq-bxB"/>
@@ -1199,13 +1205,28 @@
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Vp-Bo-7mX">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="6Vp-Bo-7mX">
                                 <rect key="frame" x="21" y="218" width="558" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Web link (optional) " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Vv-Al-2Zi">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Business Name (e.g. John's plumbing)" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="bqW-aw-rGx">
+                                <rect key="frame" x="21" y="263" width="558" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Web link (optional) " textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="1Vv-Al-2Zi">
                                 <rect key="frame" x="21" y="308" width="558" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Physical Address (optional)" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="7CZ-Xk-IHn">
+                                <rect key="frame" x="21" y="353" width="558" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Services (e.g. Handyman, Acountant etc.) " textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="sZm-RS-KCM">
+                                <rect key="frame" x="21" y="398" width="558" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -1223,21 +1244,6 @@
                                     <action selector="signupAction:" destination="1Vt-jd-j8w" eventType="touchUpInside" id="d29-KT-N2F"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Physical Address (optional)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7CZ-Xk-IHn">
-                                <rect key="frame" x="21" y="353" width="558" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Services (e.g. Handyman, Acountant etc.) " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sZm-RS-KCM">
-                                <rect key="frame" x="21" y="398" width="558" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Business Name (e.g. John's plumbing)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bqW-aw-rGx">
-                                <rect key="frame" x="21" y="263" width="558" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
